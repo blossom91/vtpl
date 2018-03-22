@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const htmlWebpackPlugins = () => {
     const arr = []
@@ -33,7 +34,7 @@ const htmlWebpackPlugins = () => {
             const conf = {
                 filename: pathname + '.html',
                 template: pages[pathname], // 模板路径
-                chunks: [pathname], // 每个html引用的js模块
+                chunks: ['manifest', 'vendor', pathname], // 每个html引用的js模块
                 minify: {
                     removeComments: true, // 移除注释
                     collapseWhitespace: true, // 折叠在文档树中有助于文本节点的空白区域。
@@ -81,7 +82,7 @@ const commonsChunkPlugins = () => {
             // 公用模块提到vendor文件中
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
-                minChunks: 2
+                minChunks: 3
             }),
             // webpack代码存放地  使用缓存需要这个
             new webpack.optimize.CommonsChunkPlugin({
@@ -130,6 +131,9 @@ const webpackConfig = merge(baseWebpackConfig, {
             cssProcessorOptions: config.build.productionSourceMap
                 ? { safe: true, map: { inline: false } }
                 : { safe: true }
+        }),
+        new CleanWebpackPlugin(['dist/*'], {
+            root: path.join(__dirname, '../')
         }),
 
         ...htmlWebpackPlugins(),

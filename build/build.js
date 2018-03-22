@@ -1,5 +1,7 @@
 'use strict'
 
+process.env.NODE_ENV = 'production'
+
 const chalk = require('chalk')
 // semantic version的简称，semver. 语义化版本号。如负责：验证版本号合法性、比较版本号大小等..
 const semver = require('semver')
@@ -60,7 +62,6 @@ const checkBuild = () => {
 
 checkBuild()
 
-process.env.NODE_ENV = 'production'
 
 const spinner = ora('go go go...')
 spinner.start()
