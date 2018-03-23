@@ -34,7 +34,7 @@ const htmlWebpackPlugins = () => {
             const conf = {
                 filename: pathname + '.html',
                 template: pages[pathname], // 模板路径
-                chunks: ['manifest', 'vendor', pathname], // 每个html引用的js模块
+                chunks: ['vendor', pathname], // 每个html引用的js模块
                 minify: {
                     removeComments: true, // 移除注释
                     collapseWhitespace: true, // 折叠在文档树中有助于文本节点的空白区域。
@@ -83,11 +83,6 @@ const commonsChunkPlugins = () => {
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
                 minChunks: 3
-            }),
-            // webpack代码存放地  使用缓存需要这个
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'manifest',
-                minChunks: Infinity
             })
         ]
     }
