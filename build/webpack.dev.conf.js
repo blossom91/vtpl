@@ -109,7 +109,7 @@ module.exports = new Promise((resolve, reject) => {
             if (config.singlePage) {
                 arrMessages = [`点击打开页面: http://${devWebpackConfig.devServer.host}:${port}\n`]
             } else {
-                arrMessages = Object.keys(utils.getMultiEntry('js')).map(
+                arrMessages = Object.keys(utils.getMultiEntry('html')).map(
                     e => `点击打开页面: http://${devWebpackConfig.devServer.host}:${port}/${e}.html\n`
                 )
             }
