@@ -1,7 +1,7 @@
 {
-    "name": "yuni-cli",
+    "name": "my-cli",
     "version": "1.0.0",
-    "description": "A Vue.js project",
+    "description": "一份配置搞定各种项目",
     "author": "<blossom@zhfei.com>",
     "private": true,
     "scripts": {
