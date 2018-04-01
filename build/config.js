@@ -14,7 +14,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {},
 
-        host: '0.0.0.0', // 如果设置了process.env.HOST，则优先使用process.env.HOST
+        host: 'localhost', // 如果设置了process.env.HOST，则优先使用process.env.HOST
         port: 8080, // 如果设置了process.env.PORT, 则优先使用process.env.PORT. 如果配置的端口被占用，会自动分配一个空闲的新端口
         autoOpenBrowser: false, // 自动打开浏览器
         errorOverlay: true, // 是否显示错误
@@ -40,7 +40,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/', // 单页面项目是/  多页面项目根据目录层级为../ 或者../../
+        assetsPublicPath: '/', // 根据项目变动 单页面/  多页面 ../ 或者 ../../
 
         // 是否开启sourceMap
         productionSourceMap: false,
@@ -52,5 +52,10 @@ module.exports = {
 
         // 是否启动打包后的文件大小分析模块
         bundleAnalyzerReport: process.env.npm_config_report
+    },
+    test: {
+        env: {
+            NODE_ENV: '"testing"'
+        }
     }
 }

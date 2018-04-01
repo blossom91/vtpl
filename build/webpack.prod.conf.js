@@ -12,11 +12,13 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+const env = process.env.NODE_ENV === 'testing' ? config.test.env : config.build.env
+
 const htmlWebpackPlugins = () => {
     const arr = []
     if (config.singlePage) {
         const conf = {
-            filename: config.build.index,
+            filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
             template: 'index.html',
             inject: true,
             minify: {
@@ -105,7 +107,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     plugins: [
         // http://vuejs.github.io/vue-loader/en/workflow/production.html
         new webpack.DefinePlugin({
-            'process.env': config.build.env
+            'process.env': env
         }),
         new UglifyJsPlugin({
             uglifyOptions: {
@@ -123,14 +125,11 @@ const webpackConfig = merge(baseWebpackConfig, {
         }),
         // 压缩去除无用css代码
         new OptimizeCSSPlugin({
-            cssProcessorOptions: config.build.productionSourceMap
-                ? { safe: true, map: { inline: false } }
-                : { safe: true }
+            cssProcessorOptions: config.build.productionSourceMap ? { safe: true, map: { inline: false } } : { safe: true }
         }),
         new CleanWebpackPlugin(['dist/*'], {
             root: path.join(__dirname, '../')
         }),
-
         ...htmlWebpackPlugins(),
         // 保持缓存
         new webpack.HashedModuleIdsPlugin(),
