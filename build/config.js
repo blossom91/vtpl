@@ -40,8 +40,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/', // 单页面项目是/  多页面项目根据目录层级为../ 或者../../
-
+        assetsPublicPath: '', 
         // 是否开启sourceMap
         productionSourceMap: false,
         devtool: '#source-map',
