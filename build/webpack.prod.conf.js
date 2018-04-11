@@ -110,7 +110,11 @@ const webpackConfig = merge(baseWebpackConfig, {
         new UglifyJsPlugin({
             uglifyOptions: {
                 comments: true, // 去掉注释
-                compress: { warnings: false } // 不显示警告信息
+                compress: {
+                    warnings: false,
+                    drop_debugger: true,
+                    drop_console: true
+                } // 不显示警告信息
             },
             //  如果配置了Uglify，那这里也要配合devtool设置sourcemap。比如devtool设置了sourcemap类型，但这里设false，那压缩的时候会把生成的map文件删掉
             sourceMap: config.build.productionSourceMap,
