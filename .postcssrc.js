@@ -5,7 +5,7 @@ module.exports = {
         'postcss-import': {}, // 处理@import引入文件
         'postcss-url': {}, //处理图片等资源引入
         'postcss-write-svg': { utf8: false },
-        autoprefixer: {} //自动添加游览器前缀
+        autoprefixer: {}, //自动添加游览器前缀
         // 'postcss-aspect-ratio-mini': {},  // 处理宽高比
         // 'postcss-cssnext': {} // 可以使用未来的css特性
         // 'postcss-px-to-viewport': {
@@ -19,5 +19,5 @@ module.exports = {
         //     mediaQuery: false // 允许在媒体查询中转换`px`
         // },
         // 'postcss-viewport-units': {} //主要是给CSS的属性添加content的属性 配合viewport-units-buggyfill适配操作
-    }
+    },
 }

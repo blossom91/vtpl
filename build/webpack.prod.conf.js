@@ -22,9 +22,9 @@ const htmlWebpackPlugins = () => {
             minify: {
                 removeComments: true, // 移除注释
                 collapseWhitespace: true, // 折叠在文档树中有助于文本节点的空白区域。
-                removeAttributeQuotes: true // 移除属性引导
+                removeAttributeQuotes: true, // 移除属性引导
             },
-            chunksSortMode: 'dependency'
+            chunksSortMode: 'dependency',
         }
         arr.push(new HtmlWebpackPlugin(conf))
     } else {
@@ -38,9 +38,9 @@ const htmlWebpackPlugins = () => {
                 minify: {
                     removeComments: true, // 移除注释
                     collapseWhitespace: true, // 折叠在文档树中有助于文本节点的空白区域。
-                    removeAttributeQuotes: true // 移除属性引导
+                    removeAttributeQuotes: true, // 移除属性引导
                 },
-                inject: true // js插入位置
+                inject: true, // js插入位置
             }
             // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
             arr.push(new HtmlWebpackPlugin(conf))
@@ -62,28 +62,28 @@ const commonsChunkPlugins = () => {
                         /\.js$/.test(module.resource) &&
                         module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0
                     )
-                }
+                },
             }),
             // webpack代码存放地  使用缓存需要这个
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'manifest',
-                minChunks: Infinity
+                minChunks: Infinity,
             }),
             // 提取动态依赖公共代码需要
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'app',
                 async: 'vendor-async',
                 children: true,
-                minChunks: 3
-            })
+                minChunks: 3,
+            }),
         ]
     } else {
         return [
             // 公用模块提到vendor文件中
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
-                minChunks: 3
-            })
+                minChunks: 3,
+            }),
         ]
     }
 }
@@ -93,19 +93,19 @@ const webpackConfig = merge(baseWebpackConfig, {
         rules: utils.styleLoaders({
             sourceMap: config.build.productionSourceMap,
             extract: true,
-            usePostCSS: true
-        })
+            usePostCSS: true,
+        }),
     },
     devtool: config.build.productionSourceMap ? config.build.devtool : false,
     output: {
         path: config.build.assetsRoot,
         filename: utils.assetsPath('js/[name].[chunkhash].js'),
-        chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+        chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
     },
     plugins: [
         // http://vuejs.github.io/vue-loader/en/workflow/production.html
         new webpack.DefinePlugin({
-            'process.env': config.build.env
+            'process.env': config.build.env,
         }),
         new UglifyJsPlugin({
             uglifyOptions: {
@@ -113,26 +113,26 @@ const webpackConfig = merge(baseWebpackConfig, {
                 compress: {
                     warnings: false,
                     drop_debugger: true,
-                    drop_console: true
-                } // 不显示警告信息
+                    drop_console: true,
+                }, // 不显示警告信息
             },
             //  如果配置了Uglify，那这里也要配合devtool设置sourcemap。比如devtool设置了sourcemap类型，但这里设false，那压缩的时候会把生成的map文件删掉
             sourceMap: config.build.productionSourceMap,
-            parallel: true // 开启多核并行处理压缩，加快速度
+            parallel: true, // 开启多核并行处理压缩，加快速度
         }),
         // 提取css打包成一个文件
         new ExtractTextPlugin({
             filename: utils.assetsPath('css/[name].[contenthash].css'),
-            allChunks: true
+            allChunks: true,
         }),
         // 压缩去除无用css代码
         new OptimizeCSSPlugin({
             cssProcessorOptions: config.build.productionSourceMap
                 ? { safe: true, map: { inline: false } }
-                : { safe: true }
+                : { safe: true },
         }),
         new CleanWebpackPlugin(['dist/*'], {
-            root: path.join(__dirname, '../')
+            root: path.join(__dirname, '../'),
         }),
 
         ...htmlWebpackPlugins(),
@@ -141,8 +141,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         // 提升打包速度
         new webpack.optimize.ModuleConcatenationPlugin(),
 
-        ...commonsChunkPlugins()
-    ]
+        ...commonsChunkPlugins(),
+    ],
 })
 
 if (config.build.productionGzip) {
@@ -154,7 +154,7 @@ if (config.build.productionGzip) {
             algorithm: 'gzip',
             test: new RegExp('\\.(' + config.build.productionGzipExtensions.join('|') + ')$'),
             threshold: 10240,
-            minRatio: 0.8
+            minRatio: 0.8,
         })
     )
 }

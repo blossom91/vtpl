@@ -7,7 +7,7 @@ module.exports = {
     singlePage: true,
     dev: {
         env: {
-            NODE_ENV: '"development"'
+            NODE_ENV: '"development"',
         },
         // Paths
         assetsSubDirectory: 'static',
@@ -28,19 +28,19 @@ module.exports = {
 
         cacheBusting: true,
         // 是否开启cssSourceMap
-        cssSourceMap: true
+        cssSourceMap: true,
     },
 
     build: {
         env: {
-            NODE_ENV: '"production"'
+            NODE_ENV: '"production"',
         },
         index: path.resolve(__dirname, '../dist/index.html'),
 
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '', 
+        assetsPublicPath: '', // 根据项目路径配置  单页面./   多页面../或者../../
         // 是否开启sourceMap
         productionSourceMap: false,
         devtool: '#source-map',
@@ -50,6 +50,6 @@ module.exports = {
         productionGzipExtensions: ['js', 'css'],
 
         // 是否启动打包后的文件大小分析模块
-        bundleAnalyzerReport: process.env.npm_config_report
-    }
+        bundleAnalyzerReport: process.env.npm_config_report,
+    },
 }

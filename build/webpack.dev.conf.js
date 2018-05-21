@@ -19,7 +19,7 @@ const htmlWebpackPlugins = () => {
         const conf = {
             filename: 'index.html',
             template: 'index.html',
-            inject: true
+            inject: true,
         }
         arr.push(new HtmlWebpackPlugin(conf))
     } else {
@@ -30,7 +30,7 @@ const htmlWebpackPlugins = () => {
                 filename: pathname + '.html',
                 template: pages[pathname], // 模板路径
                 chunks: [pathname], // 每个html引用的js模块
-                inject: true // js插入位置
+                inject: true, // js插入位置
             }
             // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
             arr.push(new HtmlWebpackPlugin(conf))
@@ -44,8 +44,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         // 合并base文件的webpack配置
         rules: utils.styleLoaders({
             sourceMap: config.dev.cssSourceMap,
-            usePostCSS: true
-        })
+            usePostCSS: true,
+        }),
     },
     // cheap-module-eval-source-map is faster for development
     devtool: config.dev.devtool,
@@ -54,7 +54,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     devServer: {
         clientLogLevel: 'warning',
         historyApiFallback: {
-            rewrites: [{ from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') }]
+            rewrites: [{ from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') }],
         },
         hot: true,
         inline: true,
@@ -75,12 +75,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         // poll: true | false | 10000
         // 在某些情况下监听文件变动可能会无效，这时候用轮询的方式查看文件变化。
         // true开启轮询，false不轮询， 10000设置轮询时间
-        watchOptions: { poll: config.dev.poll }
+        watchOptions: { poll: config.dev.poll },
     },
     plugins: [
         // 定义环境变量
         new webpack.DefinePlugin({
-            'process.env': config.dev.env
+            'process.env': config.dev.env,
         }),
         // 模块热替换
         new webpack.HotModuleReplacementPlugin(),
@@ -89,8 +89,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         // https://github.com/ampedandwired/html-webpack-plugin
-        ...htmlWebpackPlugins()
-    ]
+        ...htmlWebpackPlugins(),
+    ],
 })
 
 // const openPages = Object.keys(utils.getMultiEntry('js')).map(e => e + '.html')
@@ -117,9 +117,9 @@ module.exports = new Promise((resolve, reject) => {
             devWebpackConfig.plugins.push(
                 new FriendlyErrorsPlugin({
                     compilationSuccessInfo: {
-                        messages: arrMessages
+                        messages: arrMessages,
                     },
-                    onErrors: config.dev.notifyOnErrors ? utils.createNotifierCallback() : undefined
+                    onErrors: config.dev.notifyOnErrors ? utils.createNotifierCallback() : undefined,
                 })
             )
             resolve(devWebpackConfig)

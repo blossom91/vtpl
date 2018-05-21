@@ -8,7 +8,7 @@ export default new Router({
         {
             path: '/',
             name: 'HelloWorld',
-            component: () => import(/* webpackChunkName: HelloWorld */ '@/components/HelloWorld')
-        }
-    ]
+            component: () => import(/* webpackChunkName: HelloWorld */ '@/components/HelloWorld'),
+        },
+    ],
 })

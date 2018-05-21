@@ -15,7 +15,7 @@ module.exports = {
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
-        publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath
+        publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     },
     resolve: {
         // 省略后缀
@@ -23,8 +23,8 @@ module.exports = {
         // 匹配:require('@/test') 等同于 ./src/test.js
         alias: {
             vue$: 'vue/dist/vue.esm.js',
-            '@': resolve('src')
-        }
+            '@': resolve('src'),
+        },
     },
     module: {
         rules: [
@@ -37,7 +37,7 @@ module.exports = {
                             process.env.NODE_ENV === 'production'
                                 ? config.build.productionSourceMap
                                 : config.dev.cssSourceMap,
-                        extract: process.env.NODE_ENV === 'production'
+                        extract: process.env.NODE_ENV === 'production',
                     }),
                     cssSourceMap:
                         process.env.NODE_ENV === 'production'
@@ -49,15 +49,15 @@ module.exports = {
                         video: ['src', 'poster'],
                         source: 'src',
                         img: 'src',
-                        image: 'xlink:href'
-                    }
-                }
+                        image: 'xlink:href',
+                    },
+                },
             },
             // babel处理js可以提前使用es6功能
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [resolve('src')]
+                include: [resolve('src')],
             },
             // 处理相应文件  小于2048b会被base打包而不会http请求
             {
@@ -65,26 +65,26 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 2048,
-                    name: utils.assetsPath('img/[name].[hash:7].[ext]')
-                }
+                    name: utils.assetsPath('img/[name].[hash:7].[ext]'),
+                },
             },
             {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 2048,
-                    name: utils.assetsPath('media/[name].[hash:7].[ext]')
-                }
+                    name: utils.assetsPath('media/[name].[hash:7].[ext]'),
+                },
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-                }
-            }
-        ]
+                    name: utils.assetsPath('fonts/[name].[hash:7].[ext]'),
+                },
+            },
+        ],
     },
     node: {
         /** 不需要关注
@@ -99,6 +99,6 @@ module.exports = {
         fs: 'empty',
         net: 'empty',
         tls: 'empty',
-        child_process: 'empty'
-    }
+        child_process: 'empty',
+    },
 }
