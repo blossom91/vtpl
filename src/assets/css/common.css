@@ -1,6 +1,7 @@
 body {
     user-select: none;
     font-size: 16px;
+    text-align: center;
 }
 
 @svg 1px-border {
@@ -11,8 +12,21 @@ body {
         height: 50%;
     }
 }
-.line-1px {
+.line-1px-bottom {
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 1px solid transparent;
+    border-image: svg(1px-border param(--color #f0f0f0)) 0 0 2 0 stretch;
+}
+.line-1px-top {
+    border-left: 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-image: svg(1px-border param(--color #f0f0f0)) 2 0 0 0 stretch;
+}
+.line-1px-all {
+    border-left: 0;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    border-image: svg(1px-border param(--color #f0f0f0)) 2 2 stretch;
+    border-image: svg(1px-border param(--color #f0f0f0)) 2 0 stretch;
 }
