@@ -22,7 +22,6 @@ module.exports = {
         extensions: ['.js', '.vue', '.json'],
         // 匹配:require('@/test') 等同于 ./src/test.js
         alias: {
-            vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
         },
     },
