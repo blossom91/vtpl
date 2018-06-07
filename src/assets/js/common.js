@@ -9,11 +9,11 @@ const setRemUnit = () => {
     let width = document.documentElement.clientWidth
     width = width > 640 ? 640 : width
     document.documentElement.style.fontSize = width / 3.75 + 'px'
-    if (window.orientation === 90 || window.orientation === -90) {
-        const height = document.documentElement.clientHeight
-        height = height > 640 ? 640 : height
-        document.documentElement.style.fontSize = height / 3.75 + 'px'
-    }
+    // if (window.orientation === 90 || window.orientation === -90) {
+    //     let height = document.documentElement.clientHeight
+    //     height = height > 640 ? 640 : height
+    //     document.documentElement.style.fontSize = height / 3.75 + 'px'
+    // }
 }
 window.onload = () => {
     let reSet
