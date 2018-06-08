@@ -1,7 +1,9 @@
+/* 移动端设置 */
 body {
     user-select: none;
     font-size: 16px;
-    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 @svg 1px-border {
