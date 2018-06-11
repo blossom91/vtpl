@@ -48,6 +48,7 @@ exports.cssLoaders = options => {
             return ExtractTextPlugin.extract({
                 use: loaders,
                 fallback: 'vue-style-loader',
+                // publicPath: '../../', //如果有背景图片路径错误问题,需要根据实际项目配置路径,默认给出本项目背景图片路径
             })
         } else {
             return ['vue-style-loader'].concat(loaders)
