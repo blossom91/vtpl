@@ -235,6 +235,17 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>阿里巴巴基建项目管理审计</span>
+                                </header>
+                                <div class="item-bd">
+                                    <ul>
+                                        <li>对阿里巴巴的基建项目进行招采检查，主要检查项目招标采购的合理性、合规性。</li>
+                                        <li>担任本项目检查人员。</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
