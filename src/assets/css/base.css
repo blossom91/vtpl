@@ -20,6 +20,8 @@ html {
 body {
     width: 100%;
     color: #1e1e1e;
+    /* 禁止微信字体放大 */
+    text-size-adjust: 100% !important;
 }
 * {
     box-sizing: inherit;
