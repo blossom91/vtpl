@@ -11,7 +11,7 @@
 5.  将*vue-loader.conf.js*合并到*webpack.base.conf.js*
 6.  大量使用了*postcss*插件 用来解决 1px 问题与兼容问题 具体 [如何在 Vue 项目中使用 vw 实现移动端适配](https://www.w3cplus.com/mobile/vw-layout-in-vue.html)
 7.  整合了单页面应用与多页面应用
-    *   *config.js*中`singlePage`可设置是否单页面应用`true`与`flase`
+    *   *config.js*中`singlePage`可设置是否单页面应用`true`与`false`
     *   多页面项目时`moduleName`可设置根目录 默认为`page`
     *   `dev`环境默认关闭自动打开页面,服务启动后会打印启动页面,点击打开
 8.  目前暂不采用 vw 方案 继续 rem 方案解决移动适配问题
