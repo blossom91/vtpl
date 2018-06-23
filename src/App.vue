@@ -7,7 +7,7 @@
 
 <template>
     <div id="app">
-        <p class="last-modified">最后更新于2017年9月</p>
+        <p class="last-modified">最后更新于2018年7月</p>
         <a class="download-pdf" href="resume.pdf">下载 PDF</a>
 
         <main class="content">
@@ -26,20 +26,20 @@
                 <section class="info">
                     <ul>
                         <li>男 / 1991.02</li>
-                        <li>河南大学</li>
-                        <li>本科 / 2014年毕业</li>
+                        <li>河南大学 / 本科 / 2014年毕业</li>
+                        <!-- <li>本科 / 2014年毕业</li> -->
                     </ul>
                 </section>
                 <section class="contact">
                     <ul>
-                        <li>
+                        <!-- <li>
                             <a href="http://www.zhaohang.site/" target="_blank">
-                                <span class="contact-link">我的博客</span>
+                                <span class="contact-link">www.zhaohang.site</span>
                                 <span class="iconfont">
                                     <img style="width:16px;height:16px;" src="./博客.png" alt="">
                                 </span>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="mailto:252326977@qq.com">
                                 <span class="contact-link">blossom@zhfei.cc</span>
@@ -65,28 +65,30 @@
             </header>
             <div class="content-bd">
                 <div class="content-left">
+
                     <section class="practice">
-                        <!-- <header class="section-hd">
+                        <header class="section-hd">
                             <span class="section-title-l"></span>
-                            <h2 class="section-title">教育背景</h2>
+                            <h2 class="section-title">自我介绍</h2>
                             <span class="section-title-r"></span>
                         </header>
                         <div class="section-bd">
                             <div class="item">
-                                <header class="item-hd">
-                                    <h3 class="item-name">西安工业大学 (2014.09 - 2017.07)</h3>
-                                </header>
-                                <div class="item-bd">
-                                    结构工程 · 统招硕士
-                                </div>
-                                <header class="item-hd">
-                                    <h3 class="item-name">河南大学民生学院 (2010.09 - 2014.07)</h3>
-                                </header>
-                                <div class="item-bd">
-                                    土木工程 · 统招本科
-                                </div>
+                                <ul class="item-bd">
+                                    <li>
+                                        <a href="http://www.zhaohang.site/" target="_blank">博客</a> |
+                                        <a href="https://github.com/blossom91" target="_blank">github</a> |
+                                        <a href="https://www.jianshu.com/u/f9d190d7cdd5" target="_blank">简书</a>
+                                    </li>
+                                    <li>日常使用vue全家桶开发，webpack构建项目。</li>
+                                    <li>npm管理常用工具库代码，方便hybrid开发，也使用weex。</li>
+                                    <li>偶尔写点后端语言，node多用于爬虫和小工具，项目中使用go</li>
+                                    <li>也写过小程序，对技术充满热情，根据工作需要随时学习相应技术。</li>
+                                </ul>
                             </div>
-                        </div> -->
+                        </div>
+                    </section>
+                    <section class="practice">
                         <header class="section-hd">
                             <span class="section-title-l"></span>
                             <h2 class="section-title">工作经历</h2>
@@ -95,14 +97,13 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限工程 (2016.04 至今)</h3>
+                                    <h3 class="item-name">北京与你科技有限公司 (2016.05 至今)</h3>
                                     <!-- <span class="item-time">2017.07 至今</span> -->
                                 </header>
                                 <ul class="item-bd">
-                                    <li>日常使用vue全家桶，webpack构建了一套常用的前端工作流。</li>
-                                    <li>使用npm管理常用工具库代码，主要用于hybrid开发。</li>
-                                    <li>偶尔写点后端语言，node多用于爬虫和小工具，项目中使用go</li>
-                                    <li>对技术充满热情，根据工作需要随时学习相应技术。</li>
+                                    <li>参与公司产品的开发工作</li>
+                                    <li>pc端: 与你后台管理系统（内部使用），与你官网与相册系统</li>
+                                    <li>客户端: 钱包、红包、游戏、群组应用和各种活动页等模块</li>
                                 </ul>
                             </div>
                         </div>
@@ -119,21 +120,24 @@
                                     <span>公司后台管理项目</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>前端使用vue全家桶,iview UI框架,webpack构建</li>
-                                    <li>后端使用go,简单使用了mysql与redis数据库</li>
-                                    <li>实现了简单的聊天功能,oss上传控件,用户资料管理功能,注册用户数据统计</li>
-                                    <li>最主要实现了一套服务端用于部署发布的前端控制平台,包括项目自动发布,自动重启,选择回滚,发布记录保存等</li>
-                                    <li>也实现了前端hybrid热更新的打包发布功能</li>
+                                    <li>与你后台管理系统是公司产品管理平台，包含公司员工账户管理，用户账户信息管理，注册用户统计，客户端历史版本管理,客户聊天等功能</li>
+                                    <li>项目使用vue全家桶，iview ui框架，webpack构建，后端使用go，数据库使用mysql与redis</li>
+                                    <li>后台管理系统随着公司发展与产品迭代一直添加各种功能，目前大小模块30多个，极大方便了开发流程，简化了非开发人员的操作难度。</li>
+                                    <li>系统最主要实现了一套用于服务端部署发布的控制模块，包含服务端项目自动发布，自动重启，回滚历史版本，储存发布历史记录等功能</li>
+                                    <li>当然也实现了我们前端管理客户端内嵌hybrid页面的热更新发布与更新功能</li>
                                 </ul>
-                                <img style='width:100%' src="./1.png" alt="">
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://photos.uneed.com/">相册管理系统(对外)</a>
+                                    <a href="https://photos.uneed.com/" target="_blank">相册管理系统</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>前端使用vue全家桶,为了提高用户体验,大量使用了vuex状态管理,对外项目ui自写</li>
-                                    <li>项目地址(https://photos.uneed.com/)</li>
+                                    <li>与你相册管理系统（https://photos.uneed.com/）用于用户管理与你相册中的照片与视频</li>
+                                    <li>项目包含文件批量上传，用户群组照片删除移动复制下载，照片幻灯片观看等功能</li>
+                                    <li>基于vue的强大性能，全面优化了动画交互效果，使用vuex进行全局状态管理提高用户体验</li>
+                                    <li>为了提高性能与减轻服务端压力，使用web worker优化了上传文件的MD5计算与大批量http请求压力</li>
+                                    <li>使用localStorage与cookie相结合管理用户历史上传记录与登陆状态,通过fundebug管理线上bug统计</li>
+                                    <li>通过这个项目大大加深我对vue框架的理解，对于vnode，状态管理，引入传递，http优化，性能优化等都有了进一步学习</li>
                                 </ul>
                             </div>
                             <div class="item">
@@ -141,8 +145,18 @@
                                     <span>客户端内部页面</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你客户端内部页面包含: 钱包模块,红包模块,游戏模块,幻灯片和各种活动页面</li>
-                                    <li>欢迎下载app体验(*^__^*) 嘻嘻……</li>
+                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，游戏，群组应用和各种活动页面</li>
+                                    <li>活动页面基于hybrid技术迅速迭代开发</li>
+                                    <li>常用页面通过weex技术开发提高用户体验</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <a href="https://github.com/blossom91/Trains-and-planes" target="_blank">全国飞机铁路航班统计爬虫</a>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>爬取全国铁路飞机班次信息，铁路数据来源12306，飞机数据来自飞常准</li>
+                                    <li>写的一个小工具，基于node，模拟ip地址反爬虫，爬取后自动去重自动统计自动压缩</li>
                                 </ul>
                             </div>
                         </div>
