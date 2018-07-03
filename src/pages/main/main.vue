@@ -1,19 +1,17 @@
-<style lang="less" scoped>
-
-</style>
 
 <template>
-    <div>
+    <div class="main">
     </div>
 </template>
-
 <script>
 export default {
-    name: 'HelloWorld',
     data() {
         return {}
     },
+    created() {},
+
+    methods: {},
 }
 </script>
-
-
+<style lang="less">
+</style>

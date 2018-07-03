@@ -4,7 +4,7 @@ const path = require('path')
 
 module.exports = {
     moduleName: 'pages',
-    singlePage: true,
+    singlePage: false,
     dev: {
         env: {
             NODE_ENV: '"development"',
@@ -40,7 +40,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '', // 根据项目路径配置  单页面./   多页面../或者../../
+        assetsPublicPath: '../', // 根据项目路径配置  单页面./   多页面../或者../../
         // 是否开启sourceMap
         productionSourceMap: false,
         devtool: '#source-map',
