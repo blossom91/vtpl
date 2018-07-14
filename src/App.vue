@@ -76,14 +76,14 @@
                             <div class="item">
                                 <ul class="item-bd">
                                     <li>
-                                        <a href="http://www.zhaohang.site/" target="_blank">博客</a> |
+                                        <a href="http://zhaohang.site/" target="_blank">博客</a> |
                                         <a href="https://github.com/blossom91" target="_blank">github</a> |
                                         <a href="https://www.jianshu.com/u/f9d190d7cdd5" target="_blank">简书</a>
                                     </li>
-                                    <li>日常使用vue全家桶开发，webpack构建项目。</li>
-                                    <li>npm管理常用工具库代码，方便hybrid开发，也使用weex。</li>
-                                    <li>偶尔写点后端语言，node多用于爬虫和小工具，项目中使用go</li>
-                                    <li>也写过小程序，对技术充满热情，根据工作需要随时学习相应技术。</li>
+                                    <li>日常使用vue,vuex,vue-router全家桶开发，less与postcss预处理，webpack构建前端工程化项目。</li>
+                                    <li>npm管理常用工具库代码，方便hybrid开发，一些页面也使用weex。</li>
+                                    <li>写过小程序，使用wepy和mpvue。</li>
+                                    <li>偶尔写点后端语言，node多用于爬虫和小工具，公司项目中使用go,数据库使用mysql与redis。</li>
                                 </ul>
                             </div>
                         </div>
@@ -97,13 +97,12 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2016.05 至今)</h3>
-                                    <!-- <span class="item-time">2017.07 至今</span> -->
+                                    <h3 class="item-name">北京与你科技有限公司 (2016.06 至今)</h3>
                                 </header>
                                 <ul class="item-bd">
                                     <li>参与公司产品的开发工作</li>
                                     <li>pc端: 与你后台管理系统（内部使用），与你官网与相册系统</li>
-                                    <li>客户端: 钱包、红包、游戏、群组应用和各种活动页等模块</li>
+                                    <li>客户端: 钱包、红包、群组应用（幻灯片，天气小应用等）和各种活动页等模块</li>
                                 </ul>
                             </div>
                         </div>
@@ -145,9 +144,9 @@
                                     <span>客户端内部页面</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，游戏，群组应用和各种活动页面</li>
+                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，群组小应用和各种活动页面</li>
                                     <li>活动页面基于hybrid技术迅速迭代开发</li>
-                                    <li>常用页面通过weex技术开发提高用户体验</li>
+                                    <li>基于一套仿照小程序体系的bridge封装，开发与你app自己的群组小应用，例如幻灯片，天气等</li>
                                 </ul>
                             </div>
                             <div class="item">
