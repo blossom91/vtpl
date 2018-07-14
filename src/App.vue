@@ -17,7 +17,8 @@
                 <section class="title">
                     <div class="name">
                         <h1>郭梦莉</h1>
-                        <h3 class='head-job'>招采工程师</h3>
+                        <h3 class='head-job'>工程审计岗</h3>
+                        <h3 class='head-job'>招标采购岗</h3>
                     </div>
                     <div class="job">
                         <img src="./guo.jpeg" style='width:120px' alt="">
