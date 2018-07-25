@@ -2,9 +2,9 @@
 
 module.exports = {
     plugins: {
-        'postcss-import': {}, // 处理@import引入文件
-        'postcss-url': {}, //处理图片等资源引入
-        'postcss-write-svg': { utf8: false },
+        // 'postcss-import': {}, // 处理@import引入文件
+        // 'postcss-url': {}, //处理图片等资源引入
+        // 'postcss-write-svg': { utf8: false },
         autoprefixer: {}, //自动添加游览器前缀
         // 'postcss-aspect-ratio-mini': {},  // 处理宽高比
         // 'postcss-cssnext': {} // 可以使用未来的css特性
