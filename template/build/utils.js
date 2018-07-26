@@ -48,7 +48,7 @@ exports.cssLoaders = options => {
             return ExtractTextPlugin.extract({
                 use: loaders,
                 fallback: 'vue-style-loader',
-                // publicPath: '../../', //如果有背景图片路径错误问题,需要根据实际项目配置路径,默认给出本项目背景图片路径
+                publicPath: {{#singlePage}}'../../'{{else}}'../../../'{{/singlePage}}, // 如果有背景图片路径错误问题,需要根据实际项目配置路径
             })
         } else {
             return ['vue-style-loader'].concat(loaders)
@@ -121,6 +121,5 @@ exports.getMultiEntry = globPath => {
         pathname = pathsrc + '/' + basename // 正确输出js和html的路径
         entries[pathname] = entry
     })
-
     return entries
 }

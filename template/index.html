@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>vue-cli</title>
+    <title>{{ name }}</title>
+    {{#mobile}}
     <script>
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px'
-    </script>
+    </script> {{/mobile}}
 </head>
 
 <body>

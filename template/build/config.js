@@ -2,18 +2,19 @@
 
 const path = require('path')
 
+
 module.exports = {
     moduleName: 'pages',
-    singlePage: true,
+    singlePage: {{#singlePage}}true{{else}}false{{/singlePage}},
     dev: {
         env: {
             NODE_ENV: '"development"',
         },
         // Paths
         assetsSubDirectory: 'static',
+        assetsPublicPath: {{#mobile}}'/packages/{{ name }}/versions/dev'{{else}}'/'{{/mobile}},
         assetsPublicPath: '/',
         proxyTable: {},
-
         host: '0.0.0.0', // 如果设置了process.env.HOST，则优先使用process.env.HOST
         port: 8080, // 如果设置了process.env.PORT, 则优先使用process.env.PORT. 如果配置的端口被占用，会自动分配一个空闲的新端口
         autoOpenBrowser: false, // 自动打开浏览器
@@ -40,7 +41,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '', // 根据项目路径配置  单页面./   多页面../或者../../
+        assetsPublicPath: {{#singlePage}}'./'{{else}}'../'{{/singlePage}},
         // 是否开启sourceMap
         productionSourceMap: false,
         devtool: '#source-map',

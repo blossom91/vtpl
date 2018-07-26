@@ -1,9 +1,6 @@
-<style lang="less" scoped>
-
-</style>
-
 <template>
     <div>
+        <h1>{{msg}}</h1>
     </div>
 </template>
 
@@ -11,9 +8,13 @@
 export default {
     name: 'HelloWorld',
     data() {
-        return {}
+        return {
+            msg: 'hello word',
+        }
     },
 }
 </script>
 
+<style lang="less">
 
+</style>

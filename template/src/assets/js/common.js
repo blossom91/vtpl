@@ -1,8 +1,8 @@
 import '@/assets/css/base.css'
+{{#mobile}}
 import '@/assets/css/common.css'
 import FastClick from 'fastclick-fixed'
 FastClick.attach(document.body)
-
 const setRemUnit = () => {
     let width = document.documentElement.clientWidth
     width = width > 640 ? 640 : width
@@ -20,3 +20,6 @@ window.onload = () => {
         reSet = setTimeout(setRemUnit, 300)
     })
 }
+{{/mobile}}
+
+

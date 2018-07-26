@@ -107,10 +107,15 @@ module.exports = new Promise((resolve, reject) => {
             devWebpackConfig.devServer.port = port
             let arrMessages
             if (config.singlePage) {
-                arrMessages = [`点击打开页面: http://${devWebpackConfig.devServer.host}:${port}\n`]
+                arrMessages = [
+                    `点击打开页面: http://${devWebpackConfig.devServer.host}:${port}${config.dev.assetsPublicPath}\n`,
+                ]
             } else {
                 arrMessages = Object.keys(utils.getMultiEntry('html')).map(
-                    e => `点击打开页面: http://${devWebpackConfig.devServer.host}:${port}/${e}.html\n`
+                    e =>
+                        `点击打开页面: http://${devWebpackConfig.devServer.host}:${port}${
+                            config.dev.assetsPublicPath
+                        }/${e}.html\n`
                 )
             }
             // Add FriendlyErrorsPlugin
