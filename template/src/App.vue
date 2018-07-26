@@ -7,9 +7,6 @@
 </template>
 
 <script>
-{{#yuni}}
-import * as JSB from '@uneed/jsbridge-webview'
-{{/yuni}}
 import HelloWorld from '@/components/HelloWorld'
 
 export default {

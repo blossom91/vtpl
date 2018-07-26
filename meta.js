@@ -37,11 +37,6 @@ module.exports = {
             type: 'confirm',
             message: 'Use vue-router?',
         },
-        yuni: {
-            when: 'mobile',
-            type: 'confirm',
-            message: 'Use @uneed?',
-        },
         lint: {
             type: 'confirm',
             message: 'Use ESLint to lint your code?',
