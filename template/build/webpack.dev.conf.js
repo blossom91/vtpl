@@ -115,7 +115,7 @@ module.exports = new Promise((resolve, reject) => {
                     e =>
                         `点击打开页面: http://${devWebpackConfig.devServer.host}:${port}${
                             config.dev.assetsPublicPath
-                        }/${e}.html\n`
+                        }${e}.html\n`
                 )
             }
             // Add FriendlyErrorsPlugin
