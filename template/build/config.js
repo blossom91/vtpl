@@ -12,7 +12,6 @@ module.exports = {
         },
         // Paths
         assetsSubDirectory: 'static',
-        assetsPublicPath: {{#mobile}}'/packages/{{ name }}/versions/dev'{{else}}'/'{{/mobile}},
         assetsPublicPath: '/',
         proxyTable: {},
         host: '0.0.0.0', // 如果设置了process.env.HOST，则优先使用process.env.HOST
