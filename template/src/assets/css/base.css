@@ -25,10 +25,10 @@ body {
 }
 * {
     box-sizing: inherit;
-    &:before,
-    &:after {
-        box-sizing: inherit;
-    }
+}
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 a {
     text-decoration: none;
