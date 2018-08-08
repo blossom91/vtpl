@@ -5,7 +5,6 @@ import FastClick from 'fastclick-fixed'
 FastClick.attach(document.body)
 const setRemUnit = () => {
     let width = document.documentElement.clientWidth
-    width = width > 640 ? 640 : width
     const set_width = width / 3.75
     const now_width = parseInt(document.documentElement.style.fontSize, 10)
     if (set_width != now_width) {
