@@ -60,7 +60,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         hot: true,
         inline: true,
         progress: true,
-        contentBase: false, // since we use CopyWebpackPlugin.
+        contentBase: config.build.assetsRoot, // since we use CopyWebpackPlugin.
         compress: true,
         host: HOST || config.dev.host,
         port: PORT || config.dev.port,

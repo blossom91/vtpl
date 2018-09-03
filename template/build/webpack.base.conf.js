@@ -23,6 +23,7 @@ module.exports = {
         // 匹配:require('@/test') 等同于 ./src/test.js
         alias: {
             '@': resolve('src'),
+            '@@': resolve('src/assets/img'),
         },
     },
     module: {
