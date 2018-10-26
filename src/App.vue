@@ -1,13 +1,26 @@
 <style>
+.title {
+    position: relative;
+}
 .head-job {
     font-size: 25px;
     font-weight: 400;
+}
+.my-link {
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.my-link a {
+    color: #fff;
 }
 </style>
 
 <template>
     <div id="app">
-        <p class="last-modified">最后更新于2018年7月</p>
+        <p class="last-modified">最后更新于2018年10月</p>
         <a class="download-pdf" href="resume.pdf">下载 PDF</a>
 
         <main class="content">
@@ -19,8 +32,10 @@
                         <h1>赵航</h1>
                         <h3 class='head-job'>前端工程师</h3>
                     </div>
-                    <div class="job">
-
+                    <div class="my-link">
+                        <a href="http://zhaohang.site/" target="_blank">博客</a> |
+                        <a href="https://github.com/blossom91" target="_blank">github</a> |
+                        <a href="https://www.jianshu.com/u/f9d190d7cdd5" target="_blank">简书</a>
                     </div>
                 </section>
                 <section class="info">
@@ -75,14 +90,9 @@
                         <div class="section-bd">
                             <div class="item">
                                 <ul class="item-bd">
-                                    <li>
-                                        <a href="http://zhaohang.site/" target="_blank">博客</a> |
-                                        <a href="https://github.com/blossom91" target="_blank">github</a> |
-                                        <a href="https://www.jianshu.com/u/f9d190d7cdd5" target="_blank">简书</a>
-                                    </li>
-                                    <li>日常使用vue,vuex,vue-router全家桶开发，less与postcss预处理，webpack构建前端工程化项目。</li>
-                                    <li>npm管理常用工具库代码，方便hybrid开发，一些页面也使用weex。</li>
-                                    <li>写过小程序，使用wepy和mpvue。</li>
+                                    <li>日常使用vue,vuex,vue-router全家桶开发，less与postcss预处理</li>
+                                    <li>基于vue webpack模板fork修改了自己的一套常用的脚手架,简单配置即可构建pc/移动端/单/多页面应用</li>
+                                    <li>npm管理常用工具库代码，持续更新添加新bridge,方便快速hybrid开发。</li>
                                     <li>偶尔写点后端语言，node多用于爬虫和小工具，公司项目中使用go,数据库使用mysql与redis。</li>
                                 </ul>
                             </div>
@@ -102,7 +112,7 @@
                                 <ul class="item-bd">
                                     <li>参与公司产品的开发工作</li>
                                     <li>pc端: 与你后台管理系统（内部使用），与你官网与相册系统</li>
-                                    <li>客户端: 钱包、红包、群组应用（幻灯片，天气小应用等）和各种活动页等模块</li>
+                                    <li>客户端: 钱包、红包、群组应用（幻灯片，天气小应用,小黄脸快聊等）和各种app模块页和活动页</li>
                                 </ul>
                             </div>
                         </div>
@@ -116,10 +126,10 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>公司后台管理项目</span>
+                                    <a href="https://ops.uneed.com/" target="_blank">公司后台管理项目</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你后台管理系统是公司产品管理平台，包含公司员工账户管理，用户账户信息管理，注册用户统计，客户端历史版本管理,客户聊天等功能</li>
+                                    <li>与你后台管理系统是公司产品管理平台，包含公司员工管理，用户信息管理，用户统计，客户端历史版本管理,用户聊天,内容审核驳回封禁等功能</li>
                                     <li>项目使用vue全家桶，iview ui框架，webpack构建，后端使用go，数据库使用mysql与redis</li>
                                     <li>后台管理系统随着公司发展与产品迭代一直添加各种功能，目前大小模块30多个，极大方便了开发流程，简化了非开发人员的操作难度。</li>
                                     <li>系统最主要实现了一套用于服务端部署发布的控制模块，包含服务端项目自动发布，自动重启，回滚历史版本，储存发布历史记录等功能</li>
@@ -141,21 +151,22 @@
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>客户端内部页面</span>
+                                    <span>与你APP内部页面</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，群组小应用和各种活动页面</li>
-                                    <li>活动页面基于hybrid技术迅速迭代开发</li>
-                                    <li>基于一套仿照小程序体系的bridge封装，开发与你app自己的群组小应用，例如幻灯片，天气等</li>
+                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，群组小应用和各种功能模块和活动页面</li>
+                                    <li>活动页面基于hybrid技术迅速迭代开发(weex实际使用坑太多放弃...)</li>
+                                    <li>基于一套仿照小程序体系的bridge封装，开发与你app自己的群组小应用，例如幻灯片，天气,快聊等</li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://github.com/blossom91/Trains-and-planes" target="_blank">全国飞机铁路航班统计爬虫</a>
+                                    <a href="https://mp.weixin.qq.com/s/JfWm7r0SlGb1IoYCyXfdHA" target="_blank">戏精小应用</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>爬取全国铁路飞机班次信息，铁路数据来源12306，飞机数据来自飞常准</li>
-                                    <li>写的一个小工具，基于node，模拟ip地址反爬虫，爬取后自动去重自动统计自动压缩</li>
+                                    <li>一个比较有意思的项目,基于通信app的本质,不能通过canvas来处理这样的动画防止过于费电,所以最终我选择通过js动画实现(对,你看到的都是dom)</li>
+                                    <li>基于最强动画框架gsap(感谢这样好用的工具)开发一套傻瓜式视图动画编辑工具,可以通过简单的参数的设置自动生成想要的动画</li>
+                                    <li>通过这个项目,极大提高了我对css动画,js动画的理解与实践水平</li>
                                 </ul>
                             </div>
                         </div>
