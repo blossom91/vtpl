@@ -2,10 +2,8 @@
 body {
     user-select: none;
     font-size: 16px;
-}
-/* 移动端禁用点击事件 防止一些系统弹窗问题 */
-img {
-    pointer-events: none;
+    /* 移动端禁用事件 防止一些系统弹窗问题 */
+    -webkit-touch-callout: none; 
 }
 
 .line-1px-bottom {
