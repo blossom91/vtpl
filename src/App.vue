@@ -20,7 +20,7 @@
 
 <template>
     <div id="app">
-        <p class="last-modified">最后更新于2018年10月</p>
+        <p class="last-modified">最后更新于2019年2月</p>
         <a class="download-pdf" href="resume.pdf">下载 PDF</a>
 
         <main class="content">
@@ -42,19 +42,10 @@
                     <ul>
                         <li>男 / 1991.02</li>
                         <li>河南大学 / 本科 / 2014年毕业</li>
-                        <!-- <li>本科 / 2014年毕业</li> -->
                     </ul>
                 </section>
                 <section class="contact">
                     <ul>
-                        <!-- <li>
-                            <a href="http://www.zhaohang.site/" target="_blank">
-                                <span class="contact-link">www.zhaohang.site</span>
-                                <span class="iconfont">
-                                    <img style="width:16px;height:16px;" src="./博客.png" alt="">
-                                </span>
-                            </a>
-                        </li> -->
                         <li>
                             <a href="mailto:252326977@qq.com">
                                 <span class="contact-link">blossom@zhfei.cc</span>
@@ -84,16 +75,17 @@
                     <section class="practice">
                         <header class="section-hd">
                             <span class="section-title-l"></span>
-                            <h2 class="section-title">自我介绍</h2>
+                            <h2 class="section-title">个人技能</h2>
                             <span class="section-title-r"></span>
                         </header>
                         <div class="section-bd">
                             <div class="item">
                                 <ul class="item-bd">
-                                    <li>日常使用vue,vuex,vue-router全家桶开发，less与postcss预处理</li>
-                                    <li>基于vue webpack模板fork修改了自己的一套常用的脚手架,简单配置即可构建pc/移动端/单/多页面应用</li>
-                                    <li>npm管理常用工具库代码，持续更新添加新bridge,方便快速hybrid开发。</li>
-                                    <li>偶尔写点后端语言，node多用于爬虫和小工具，公司项目中使用go,数据库使用mysql与redis。</li>
+                                    <li>日常使用Vue,Vuex,Vue-Router全家桶开发,Less与Postcss预处理</li>
+                                    <li>基于Vue Webpack模板fork修改了一套常用的脚手架,简单配置即可构建pc/移动端/单/多页面应用</li>
+                                    <li>通过npm管理App Bridge函数库,方便根据版本快速Hybrid开发</li>
+                                    <li>使用Electron构建桌面端应用,node编写辅助开发的效率工具,例如爬虫,数据处理等</li>
+                                    <li>开发过一个上线的小程序(与你创造共同回忆),用于引导微信用户注册</li>
                                 </ul>
                             </div>
                         </div>
@@ -107,12 +99,13 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2016.06 至今)</h3>
+                                    <h3 class="item-name">北京与你科技有限公司 (2017.03 至今)</h3>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>参与公司产品的开发工作</li>
-                                    <li>pc端: 与你后台管理系统（内部使用），与你官网与相册系统</li>
-                                    <li>客户端: 钱包、红包、群组应用（幻灯片，天气小应用,小黄脸快聊等）和各种app模块页和活动页</li>
+                                    <li>pc端: 与你后台管理系统（内部使用）,与你官网与相册系统</li>
+                                    <li>客户端: 钱包、红包、群组应用（幻灯片,天气小应用,小黄脸快聊等）和各种App模块页和活动页</li>
+                                    <li>桌面端: 与你客户端桌面版</li>
+                                    <li>小程序: 与你创造共同回忆</li>
                                 </ul>
                             </div>
                         </div>
@@ -129,24 +122,22 @@
                                     <a href="https://ops.uneed.com/" target="_blank">公司后台管理项目</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你后台管理系统是公司产品管理平台，包含公司员工管理，用户信息管理，用户统计，客户端历史版本管理,用户聊天,内容审核驳回封禁等功能</li>
-                                    <li>项目使用vue全家桶，iview ui框架，webpack构建，后端使用go，数据库使用mysql与redis</li>
-                                    <li>后台管理系统随着公司发展与产品迭代一直添加各种功能，目前大小模块30多个，极大方便了开发流程，简化了非开发人员的操作难度。</li>
-                                    <li>系统最主要实现了一套用于服务端部署发布的控制模块，包含服务端项目自动发布，自动重启，回滚历史版本，储存发布历史记录等功能</li>
-                                    <li>当然也实现了我们前端管理客户端内嵌hybrid页面的热更新发布与更新功能</li>
+                                    <li>与你后台管理系统是公司产品管理平台,包含公司员工管理,用户信息管理,用户统计,客户端历史版本管理,投诉管理,内容审核驳回封禁等功能</li>
+                                    <li>项目使用Vue全家桶,iview ui框架,后端使用go,数据库使用mysql与redis</li>
+                                    <li>后台管理系统随着公司发展与产品迭代一直添加各种功能,目前大小模块40多个,极大方便了开发流程,简化了非开发人员的操作难度</li>
+                                    <li>系统最主要实现了一套用于服务端部署发布的控制模块,包含服务端项目自动发布,自动重启,回滚历史版本,储存发布历史记录等功能</li>
+                                    <li>当然也实现了我们前端管理客户端内嵌Hybrid页面的热更新发布与版本管理功能</li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://photos.uneed.com/" target="_blank">相册管理系统</a>
+                                    <a href="https://photos.uneed.com/index" target="_blank">与你桌面版</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你相册管理系统（https://photos.uneed.com/）用于用户管理与你相册中的照片与视频</li>
-                                    <li>项目包含文件批量上传，用户群组照片删除移动复制下载，照片幻灯片观看等功能</li>
-                                    <li>基于vue的强大性能，全面优化了动画交互效果，使用vuex进行全局状态管理提高用户体验</li>
-                                    <li>为了提高性能与减轻服务端压力，使用web worker优化了上传文件的MD5计算与大批量http请求压力</li>
-                                    <li>使用localStorage与cookie相结合管理用户历史上传记录与登陆状态,通过fundebug管理线上bug统计</li>
-                                    <li>通过这个项目大大加深我对vue框架的理解，对于vnode，状态管理，引入传递，http优化，性能优化等都有了进一步学习</li>
+                                    <li>与你桌面版（https://photos.uneed.com/index）是与你社交App的桌面版本</li>
+                                    <li>项目基于Electron构建,Rxjs做全局事件管理,底层通信机制基于Websocket</li>
+                                    <li>为了提高性能与减轻服务端压力,使用Web Worker进行大量优化</li>
+                                    <li>使用SQLite做数据库管理,通过fundebug进行线上bug统计</li>
                                 </ul>
                             </div>
                             <div class="item">
@@ -154,9 +145,9 @@
                                     <span>与你APP内部页面</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你客户端内嵌的h5页面，包含了钱包，红包，群组小应用和各种功能模块和活动页面</li>
-                                    <li>活动页面基于hybrid技术迅速迭代开发(weex实际使用坑太多放弃...)</li>
-                                    <li>基于一套仿照小程序体系的bridge封装，开发与你app自己的群组小应用，例如幻灯片，天气,快聊等</li>
+                                    <li>与你客户端内嵌的H5页面,包含了钱包,红包,群组小应用和各种功能模块和活动页面</li>
+                                    <li>活动页面基于Hybrid技术迅速迭代开发</li>
+                                    <li>基于一套仿照小程序体系的bridge封装,开发与你App群组小应用,例如幻灯片,天气,一起看,戏精等</li>
                                 </ul>
                             </div>
                             <div class="item">
@@ -164,9 +155,9 @@
                                     <a href="https://mp.weixin.qq.com/s/JfWm7r0SlGb1IoYCyXfdHA" target="_blank">戏精小应用</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>一个比较有意思的项目,基于通信app的本质,不能通过canvas来处理这样的动画防止过于费电,所以最终我选择通过js动画实现(对,你看到的都是dom)</li>
-                                    <li>基于最强动画框架gsap(感谢这样好用的工具)开发一套傻瓜式视图动画编辑工具,可以通过简单的参数的设置自动生成想要的动画</li>
-                                    <li>通过这个项目,极大提高了我对css动画,js动画的理解与实践水平</li>
+                                    <li>基于社交App的本质,使用canvas做动画过于费电,所以虽然动画较复杂,还是通过js与css动画实现</li>
+                                    <li>基于动画框架gsap开发了一套桌面端视图动画编辑工具,通过简单的参数配置自动生成动画需要的json文件</li>
+                                    <li>通过canvas绘制图片和node脚本批量操作,为每一个用户在数据库生成了一套个性化的戏精头像</li>
                                 </ul>
                             </div>
                         </div>
