@@ -4,6 +4,8 @@ body {
     font-size: 16px;
     /* 移动端禁用事件 防止一些系统弹窗问题 */
     -webkit-touch-callout: none; 
+    /* max-width: 768px;
+    margin: 0 auto; */
 }
 
 .line-1px-bottom {
