@@ -1,4 +1,7 @@
 /* 移动端设置 */
+html {
+    font-size: 16px;
+}
 body {
     user-select: none;
     font-size: 16px;
