@@ -12,7 +12,7 @@ html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%;
     width: 100%;
-    height:100%;
+    height: 100%;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
     /* 安卓有字体上浮问题 */
@@ -21,7 +21,7 @@ html {
 }
 body {
     width: 100%;
-    height:100%;
+    height: 100%;
     color: #1e1e1e;
     /* 禁止微信字体放大 */
     text-size-adjust: 100% !important;
@@ -72,4 +72,5 @@ button,
 button {
     outline: 0;
     border: none;
+    background-color: transparent;
 }

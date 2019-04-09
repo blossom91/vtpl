@@ -6,30 +6,15 @@ body {
     user-select: none;
     font-size: 16px;
     /* 移动端禁用事件 防止一些系统弹窗问题 */
-    -webkit-touch-callout: none; 
+    -webkit-touch-callout: none;
     /* max-width: 768px;
     margin: 0 auto; */
 }
 
-.line-1px-bottom {
-    position: relative;
-}
-.line-1px-bottom::before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 1px;
-    border-bottom: 1px solid #f0f0f0;
-    color: #f0f0f0;
-    transform-origin: 0 100%;
-    transform: scaleY(0.5);
-}
 .line-1px-top {
     position: relative;
 }
-.line-1px-top::after {
+.line-1px-top::before {
     content: ' ';
     position: absolute;
     left: 0;
@@ -37,6 +22,21 @@ body {
     right: 0;
     height: 1px;
     border-top: 1px solid #f0f0f0;
+    color: #f0f0f0;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+.line-1px-bottom {
+    position: relative;
+}
+.line-1px-bottom::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #f0f0f0;
     color: #f0f0f0;
     transform-origin: 0 0;
     transform: scaleY(0.5);
@@ -48,10 +48,10 @@ body {
     content: ' ';
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     right: 0;
     height: 1px;
-    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
     color: #f0f0f0;
     transform-origin: 0 0;
     transform: scaleY(0.5);
@@ -60,10 +60,10 @@ body {
     content: ' ';
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     right: 0;
     height: 1px;
-    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
     color: #f0f0f0;
     transform-origin: 0 100%;
     transform: scaleY(0.5);
