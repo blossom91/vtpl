@@ -1,8 +1,7 @@
 import '@/assets/css/base.css'
 {{#mobile}}
 import '@/assets/css/common.css'
-import FastClick from 'fastclick'
-FastClick.attach(document.body)
+
 
 if (!window.Promise) {
     window.Promise = Promise

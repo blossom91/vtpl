@@ -15,9 +15,7 @@ html {
     height: 100%;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
-    /* 安卓有字体上浮问题 */
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
-        Helvetica, Arial, sans-serif; */
+    touch-action: manipulation; /* 触摸动作也经常用于完全解决由支持双击缩放手势引起的点击事件的延迟。*/
 }
 body {
     width: 100%;

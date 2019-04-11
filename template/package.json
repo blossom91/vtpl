@@ -9,9 +9,6 @@
         "build": "node build/build.js"
     },
     "dependencies": {
-        {{#mobile}}
-        "fastclick": "^1.0.6",
-        {{/mobile}}
         {{#router}}
         "vue-router": "^3.0.1",
         {{/router}}
