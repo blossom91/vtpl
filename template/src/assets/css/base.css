@@ -16,6 +16,7 @@ html {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
     touch-action: manipulation; /* 触摸动作也经常用于完全解决由支持双击缩放手势引起的点击事件的延迟。*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 禁止ios与ipad高亮显示点击背景 */
 }
 body {
     width: 100%;
