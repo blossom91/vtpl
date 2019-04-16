@@ -7,8 +7,8 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'HelloWorld',
-            component: () => import(/* webpackChunkName: HelloWorld */ '@/components/HelloWorld'),
+            name: 'YSwitch',
+            component: () => import(/* webpackChunkName: HelloWorld */ '@/components/YSwitch'),
         },
     ],
 })
