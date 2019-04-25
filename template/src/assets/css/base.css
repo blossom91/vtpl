@@ -52,6 +52,8 @@ textarea {
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
+    user-select: initial;
+    -webkit-touch-callout: initial;
 }
 button,
 [type='button'],
