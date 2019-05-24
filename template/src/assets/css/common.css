@@ -2,11 +2,10 @@
 html {
     font-size: 16px;
 }
+
 body {
     user-select: none;
-    font-size: 16px;
-    /* 移动端禁用事件 防止一些系统弹窗问题 */
-    -webkit-touch-callout: none;
+    /* 如果不是纯移动端页面 需要设置下面参数 */
     /* max-width: 768px;
     margin: 0 auto; */
 }

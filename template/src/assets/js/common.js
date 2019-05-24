@@ -3,10 +3,6 @@ import '@/assets/css/base.css'
 import '@/assets/css/common.css'
 
 
-if (!window.Promise) {
-    window.Promise = Promise
-}
-
 const setRemUnit = () => {
     let html = document.documentElement
     html.style.fontSize = 100 / 3.75 + 'vw'
@@ -40,7 +36,14 @@ const setRemUnit = () => {
         }
     }
 }
-setRemUnit()
+// 根据环境运行一些逻辑
+if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+    //ios active失效问题
+    document.body.addEventListener('touchstart', () => {})
+    document.documentElement.style.fontSize = 100 / 3.75 + 'vw'
+} else if (/(Android)/i.test(navigator.userAgent)) {
+    setRemUnit()
+} 
    
 {{/mobile}}
 
