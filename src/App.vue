@@ -16,6 +16,19 @@
 .my-link a {
     color: #fff;
 }
+.demo-img {
+    width: 80%;
+    max-height: 80%;
+    margin-left: 10%;
+}
+.demo2-img {
+    width: 400px;
+    max-height: 500px;
+}
+.demo-box {
+    display: flex;
+    justify-content: space-between;
+}
 </style>
 
 <template>
@@ -32,7 +45,6 @@
                         <h3 class="head-job">前端工程师</h3>
                     </div>
                     <div class="my-link">
-                        <a href="http://zhaohang.site/" target="_blank">博客</a> |
                         <a href="https://github.com/blossom91" target="_blank">github</a> |
                         <a href="https://www.jianshu.com/u/f9d190d7cdd5" target="_blank">简书</a>
                     </div>
@@ -83,19 +95,36 @@
                         <div class="section-bd">
                             <div class="item">
                                 <ul class="item-bd">
-                                    <li>基于Electron构建IM桌面应用,Rxjs做全局数据管理,Websocket用于通信连接</li>
                                     <li>
-                                        使用Node编写服务器,效率工具与脚本,用于爬虫,自动化部署,数据库批处理和web服务
-                                    </li>
-                                    <li>使用Vue,Vuex,Vue-Router全家桶开发,Less与Postcss预处理</li>
-                                    <li>
-                                        熟练掌握Webpack,可根据pc/移动/单/多页面应用需求配置相应环境,可自主开发Webpack插件
+                                        掌握类与⾯向对象的编程思想，具备在⼯作中封装、优化、重构项⽬代码的能⼒,
+                                        具备良好的编码⻛格
                                     </li>
                                     <li>
-                                        熟练使用npm管理常用工具包,熟悉linux开发环境,通过npm管理App
-                                        Bridge函数库,方便根据客户端版本动态迭代完成Hybrid开发
+                                        熟练掌握 Webpack 原理，实现过 Webpack 核⼼功能, 理解 AST 运行机制, 对 loader 和
+                                        plugin 有深⼊理解，能根据项⽬需求开发相应的 loader 和 plugin 解决问题
                                     </li>
-                                    <li>开发过一个上线的小程序(与你创造共同回忆),用于引导微信用户注册</li>
+                                    <li>
+                                        熟练掌握 Vue 技术栈及其原理，深度使用 Vue 相关生态, 对 Vue 响应式, 数据绑定,
+                                        render, Diff, createElement等核心功能都有所研究, 方便快速开发项目, 排查问题
+                                    </li>
+                                    <li>
+                                        深入理解前端与移动端通信原理, 可实现用于两端通信的 Bridge 基础框架, 基于 iframe
+                                        做降级兼容, Android 基于 addJavascriptInterface, iOS 基于 userContentController
+                                        实现更现代化的调用机制, 通过 npm 做 Bridge 包管理模块, 提高开发效率
+                                    </li>
+                                    <li>
+                                        精通 electron 用于开发跨平台桌面程序, 了解基于 RPC 的主进程渲染进程通信机制,
+                                        对于 electron 的原生性能, 质量监控, 安全防护, 打包优化, 自动更新等机制都有所涉猎
+                                    </li>
+                                    <li>
+                                        熟练掌握 Node Python 等常见后端编程语言, 熟悉HTTP/TCP网络协议,
+                                        能使用Socket实现基本的HTTP server, 理解 SSR 原理, 可实现服务端渲染
+                                    </li>
+                                    <li>
+                                        熟悉操作系统基本知识, 如寄存器, 虚拟机, 逻辑门电路, 图形渲染展示, 图像压缩,
+                                        进程, 线程, 协程等, 熟悉基本的 数据结构, 了解相应的时间复杂度, 并能实现 链表 栈
+                                        队列 Map等结构
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -109,16 +138,82 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2017.03 至今)</h3>
+                                    <h3 class="item-name">北京与你科技有限公司 (2017.07 至今)</h3>
+                                </header>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <a href="https://www.uneed.com" target="_blank">与你IM桌面版</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>pc端: 与你后台管理系统</li>
                                     <li>
-                                        客户端:
-                                        钱包、红包、群组应用（幻灯片,天气小应用,小黄脸快聊等）和各种App模块页和活动页
+                                        参与与主导与你IM桌面端的开发工作,项目基于 Electron 做跨平台兼容
                                     </li>
-                                    <li>桌面端: 与你IM桌面版</li>
-                                    <li>小程序: 与你创造共同回忆</li>
+                                    <li>
+                                        基于 Vue 做渲染层处理, Rxjs 做状态管理, SQLite 做数据储存, Websocket 做两端通信
+                                    </li>
+                                    <li>
+                                        实现群权限管理, @群成员, 文件拖动发送, 音视频表情发送, 消息撤回, 重发,
+                                        转发等基本IM功能
+                                    </li>
+                                    <li>
+                                        基于阿里云oss实现断点上传与分片下载,实现云端文件音频播放,视频播放等,实现基于全量更新与增量更新的自动更新逻辑等等
+                                    </li>
+                                    <li>
+                                        基于严格的 eslint 代码规范,保证了良好的代码结构与功能分层,实现了快速的迭代开发
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>后台管理项目</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>
+                                        参与设计内部后台管理系统, 实现了账号权限系统,根据不同部门实现响应需求
+                                    </li>
+                                    <li>
+                                        包括自动部署,代码回滚,发布日志,App版本管理,版本灰度管理,用户资料审核,用户数据统计,封禁,活动监测,通知管理等各类模块
+                                    </li>
+                                    <li>项目基于Vue做渲染层, Vue-Router路由管理, Iview UI组件基础库</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>移动端项目</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>
+                                        负责与你客户端内嵌的H5项目,包含了钱包,红包,群组小应用,各种功能模块和活动页面的开发工作
+                                    </li>
+                                    <li>
+                                        内部维护一套仿小程序api的Bridge封装,并维护文档的及时更新便于各端查阅
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>基础工具与分享</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>
+                                        开发内部效率工具 upack, 实现客户端更新本地前端项目包, 实现远端项目的打包发布逻辑
+                                    </li>
+                                    <li>
+                                        实现基于 Webpack 构建的前端多环境配置化项目脚手架, 实现远端项目的打包发布逻辑
+                                    </li>
+                                    <li>
+                                        参与并主导了基于 Docker Drone 部署 gitlab runner 执⾏ CI<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解决客户端自动打包, i18n项目自动编译发布,
+                                        自动测试等实际需求, 提高了客户端打包效率与降低服务端发布的故障率
+                                    </li>
+                                    <li>
+                                        负责组内需求沟通与分解, 安排工作进度, 协调各端资源, 推进项目进度.
+                                    </li>
+                                    <li>
+                                        负责组内技术分享与培训, 提升组内技术氛围, 提升组内业务水平,
+                                        前端组一直是公司进度的排头兵, 提高了项目进度周期的容错性
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -126,83 +221,80 @@
                     <section class="project">
                         <header class="section-hd">
                             <span class="section-title-l"></span>
-                            <h2 class="section-title">项目经历</h2>
+                            <h2 class="section-title">个人项目</h2>
                             <span class="section-title-r"></span>
                         </header>
 
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://www.uneed.com" target="_blank">与你IM桌面版</a>
+                                    <span>ES6版 canvas小游戏</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你IM桌面版（https://www.uneed.com）是与你社交App的桌面版本</li>
-                                    <li>项目基于Electron构建,Rxjs做全局事件管理,底层通信机制基于Websocket</li>
                                     <li>
-                                        为了方便扩展,实现了一套文本编辑器,用于实现可定制的复制粘贴图片,@群成员功能,拖动消息发送,文件直接拖动发送等功能
+                                        基于原生 ES6 与 canvas 实现飞行的小鸟,实现了资源预加载,数据绑定,事件注册
                                     </li>
-                                    <li>
-                                        基于SQLite做了全局的数据储存,尽量本地化数据（包括本地用户数据,群组数据,图片缓存数据,聊天会话数据,上传下载数据,云空间数据等）提高软件稳定性,降低服务端压力
-                                    </li>
-                                    <li>为了提高性能,防止UI卡顿,项目利用了多线程处理最重要的消息通信模块</li>
-                                    <li>
-                                        通过阿里云oss实现了断点上传与分片下载,方便用户通过桌面端批量管理图片视频等资源,补充移动客户端文件管理的不便
-                                    </li>
-                                    <li>
-                                        利用内嵌的ffmpeg模块解决用户上传视频播放格式的兼容性问题
-                                    </li>
-                                    <li>
-                                        通过node获取音频包括封面等信息，基于强大的音频播放模块，实现了比较完备的音频播放支持
-                                    </li>
-                                    <li>根据用户不同系统（mac,win）解决各类兼容问题,支持个性化软件设置,提高用户体验</li>
+                                    <li>熟悉了面向对象的编程思维,掌握常用的ES6语法</li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>与你APP内部页面</span>
+                                    <span>图形学学习</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>与你客户端内嵌的H5页面,包含了钱包,红包,群组小应用和各种功能模块和活动页面</li>
                                     <li>
-                                        基于一套仿照小程序体系的bridge封装,开发与你App群组小应用,例如幻灯片,天气,一起看,戏精等
+                                        基于图形学原理从零实现世界坐标系 模型坐标系 视口坐标系的三维转换, 完成各 mesh 的
+                                        三维模型渲染
+                                    </li>
+                                    <li>
+                                        实现光栅化渲染, 色彩过渡, 背面剔除优化与简单的三角形平面模式的光线效果
                                     </li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://ops.uneed.com/" target="_blank">公司后台管理项目</a>
+                                    <span>音视频压缩</span>
                                 </header>
                                 <ul class="item-bd">
                                     <li>
-                                        与你后台管理系统是公司产品管理平台,根据账号权限不同,分为运营权限,管理权限和员工权限等等,包含公司员工管理,用户信息管理,用户统计,App数据统计,客户端历史版本管理,投诉管理,App内容审核等等功能
-                                    </li>
-                                    <li>项目使用Vue全家桶,iview ui框架,后端使用go,数据库使用mysql与redis</li>
-                                    <li>
-                                        后台管理系统随着公司发展与产品迭代一直添加各种功能,目前大小模块60多个,极大方便了开发流程,简化了非开发人员的操作难度
+                                        基于离散余弦变换做时频域转换,过滤高频信号,基于LZW算法实现图片压缩
                                     </li>
                                     <li>
-                                        系统最主要实现了一套用于服务端自动部署发布的控制模块,包含服务端项目远端运行状态,项目自动化发布,一键重启,项目回滚功能,发布历史记录查询等功能
+                                        基于图片压缩的基础上,利用关键帧差值计算,实现视频压缩
                                     </li>
-                                    <li>当然也实现了我们前端管理客户端内嵌Hybrid页面的热更新发布与灰度版本功能</li>
                                 </ul>
                             </div>
+                        </div>
+                    </section>
+
+                    <section class="project">
+                        <header class="section-hd">
+                            <span class="section-title-l"></span>
+                            <h2 class="section-title">附项目图片</h2>
+                            <span class="section-title-r"></span>
+                        </header>
+                        <div class="section-bd">
+                            <div class="demo-box">
+                                <div class="item">
+                                    <header class="item-hd">
+                                        <span>光线追踪与调试界面</span>
+                                    </header>
+                                    <img class="demo2-img" src="./img/1.png" alt="" />
+                                </div>
+
+                                <div class="item">
+                                    <header class="item-hd">
+                                        <span>canvas版小鸟</span>
+                                    </header>
+                                    <img class="demo2-img" src="./img/3.png" alt="" />
+                                </div>
+                            </div>
+                            <br />
                             <div class="item">
                                 <header class="item-hd">
-                                    <a href="https://mp.weixin.qq.com/s/JfWm7r0SlGb1IoYCyXfdHA" target="_blank"
-                                        >戏精小应用</a
-                                    >
+                                    <span>与你桌面端</span>
                                 </header>
-                                <ul class="item-bd">
-                                    <li>
-                                        基于社交App的本质,使用canvas做动画过于费电,所以虽然动画较复杂,还是通过js与css动画实现
-                                    </li>
-                                    <li>
-                                        基于动画框架gsap开发了一套桌面端视图动画编辑工具,通过简单的参数配置自动生成动画需要的json文件
-                                    </li>
-                                    <li>
-                                        通过canvas绘制图片和node脚本批量操作,为每一个用户在数据库生成了一套个性化的戏精头像
-                                    </li>
-                                </ul>
+                                <img class="demo-img" src="./img/desktop.png" alt="" />
                             </div>
                         </div>
                     </section>
@@ -220,4 +312,3 @@ export default {
     name: 'App',
 }
 </script>
-
