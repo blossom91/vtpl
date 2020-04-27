@@ -51,8 +51,8 @@
                 </section>
                 <section class="info">
                     <ul>
-                        <li>男 / 1991.02</li>
-                        <li>河南大学民生学院 / 本科 / 2014年毕业</li>
+                        <li>男 / 1991</li>
+                        <li>河南大学民生学院 / 统招本科</li>
                     </ul>
                 </section>
                 <section class="contact">
@@ -96,12 +96,17 @@
                             <div class="item">
                                 <ul class="item-bd">
                                     <li>
-                                        熟练掌握类与⾯向对象的编程思想，具备在⼯作中封装、优化、重构项⽬代码的能⼒，
+                                        精通 electron 用于开发跨平台桌面程序，了解基于 RPC 的主进程渲染进程通信机制，
+                                        对于 electron 的原生模块，Node扩展，质量监控，打包优化，自动更新，
+                                        C++集成等机制都有所了解
+                                    </li>
+                                    <li>
+                                        熟练掌握类与⾯向对象的编程思想，理解函数式编程，具备在⼯作中封装、优化、重构项⽬代码的能⼒，
                                         具备良好的编码⻛格
                                     </li>
                                     <li>
                                         熟练掌握 Webpack 原理，实现过 Webpack 核⼼功能，理解 AST 运行机制，对 loader 和
-                                        plugin 有深⼊理解，能根据项⽬需求开发相应的 loader 和 plugin 解决问题
+                                        plugin 有深⼊理解，便于扩展前端项目的工具化，提高开发效率
                                     </li>
                                     <li>
                                         熟练掌握 Vue 技术栈及其原理，深度使用 Vue 相关生态，对 Vue 响应式，数据绑定，
@@ -112,13 +117,9 @@
                                         做降级兼容，Android 基于 addJavascriptInterface，iOS 基于 userContentController
                                         实现更现代化的调用机制，通过 npm 做 Bridge 包管理模块， 提高开发效率
                                     </li>
+
                                     <li>
-                                        精通 electron 用于开发跨平台桌面程序，了解基于 RPC 的主进程渲染进程通信机制，
-                                        对于 electron 的原生性能，质量监控，安全防护，打包优化，
-                                        自动更新等机制都有所涉猎
-                                    </li>
-                                    <li>
-                                        掌握 Node Python 等常见后端编程语言，熟悉HTTP/TCP网络协议，
+                                        掌握 Node、Python 等后端编程语言，熟悉HTTP/TCP网络协议，
                                         能使用Socket实现基本的HTTP server，理解 SSR 原理，可实现服务端渲染
                                     </li>
                                     <li>
@@ -139,7 +140,7 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2017.07 至今)</h3>
+                                    <h3 class="item-name">北京与你科技有限公司 (2017-至今)</h3>
                                 </header>
                             </div>
                             <div class="item">
@@ -152,18 +153,38 @@
                                     </li>
                                     <li>
                                         基于 Vue 做渲染层处理，Rxjs 做状态管理，SQLite 做数据持久化，Websocket
-                                        实现通信机制
+                                        实现通信机制，WebRTC 实现点对点的视频通话
                                     </li>
                                     <li>
                                         实现群权限管理，@群成员，文件拖动发送，音视频表情发送，消息撤回，重发，
                                         转发等基本IM功能
                                     </li>
                                     <li>
-                                        基于阿里云oss实现断点上传与分片下载，实现云端文件音频播放，视频播放等，实现基于全量更新与增量更新的自动更新逻辑等
+                                        基于oss实现断点上传与分片下载，实现云端文件音视频播放，实现基于全量更新与增量更新的自动更新逻辑等
                                     </li>
                                     <li>
-                                        基于严格的 eslint 代码规范，保证了良好的代码结构和功能隔离，实现了快速的迭代开发
+                                        基于 protocol 与 最新的 V8引擎 特性实现高性能的图片本地缓存 lazy 机制，实现基于
+                                        RPC 的多进程调用提高数据库读写与图片缓存性能
                                     </li>
+                                    <li>
+                                        基于严格的 eslint
+                                        代码规范和模块化管理，保证了良好的代码结构和功能隔离，实现了快速的迭代开发
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>动画编辑器</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>
+                                        基于 GSAP 动画框架 与 electron
+                                        实现的视图动画编辑工具，用于方便UI创作基于帧的DOM运动操控动画效果
+                                    </li>
+                                    <li>
+                                        实现一些基础的动画效果，并可自由组合
+                                    </li>
+                                    <li>实现播放，重播，暂停，调整动画时间，制作gif图等功能</li>
                                 </ul>
                             </div>
                             <div class="item">
@@ -189,14 +210,13 @@
                                         负责与你客户端内嵌的H5项目，包含了钱包，红包，群组小应用，各种功能模块和活动页面的开发工作
                                     </li>
                                     <li>
-                                        基于 npm 维护一套仿小程序api的 Bridge
-                                        封装，并维护文档的及时更新便于内部各端是使用
+                                        基于 npm 维护一套仿小程序api的 Bridge 封装，并维护文档的及时更新便于内部各端使用
                                     </li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>基础工具与分享</span>
+                                    <span>基础工具建设与技术分享</span>
                                 </header>
                                 <ul class="item-bd">
                                     <li>
@@ -221,26 +241,29 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="section-bd">
+                            <div class="item">
+                                <header class="item-hd">
+                                    <h3 class="item-name">河南国基建筑设计院 (2014-2017)</h3>
+                                </header>
+                            </div>
+                            <!-- <div class="item">
+                                <ul class="item-bd">
+                                    <li>
+                                        CAD 结构设计
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </div>
                     </section>
                     <section class="project">
                         <header class="section-hd">
                             <span class="section-title-l"></span>
-                            <h2 class="section-title">个人项目</h2>
+                            <h2 class="section-title">业余项目</h2>
                             <span class="section-title-r"></span>
                         </header>
 
                         <div class="section-bd">
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>ES6版 canvas 小游戏</span>
-                                </header>
-                                <ul class="item-bd">
-                                    <li>
-                                        基于原生 ES6 与 canvas 实现打飞机，实现了资源预加载，数据绑定，事件注册
-                                    </li>
-                                    <li>用于熟悉面向对象的编程思维，掌握常用的 ES6 语法</li>
-                                </ul>
-                            </div>
                             <div class="item">
                                 <header class="item-hd">
                                     <span>图形学学习</span>
@@ -257,7 +280,7 @@
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>音视频压缩</span>
+                                    <span>音视频压缩学习</span>
                                 </header>
                                 <ul class="item-bd">
                                     <li>
@@ -288,14 +311,9 @@
 
                                 <div class="item">
                                     <header class="item-hd">
-                                        <span>canvas版打飞机</span>
+                                        <span>动画编辑器</span>
                                     </header>
-                                    <img
-                                        class="demo2-img"
-                                        style="width:350px;margin-right:50px"
-                                        src="./img/4.png"
-                                        alt=""
-                                    />
+                                    <img class="demo2-img" src="./img/5.png" alt="" />
                                 </div>
                             </div>
                             <br />
@@ -318,6 +336,6 @@
 
 <script>
 export default {
-    name: 'App'
+    name: 'App',
 }
 </script>
