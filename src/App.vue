@@ -52,7 +52,7 @@
                 <section class="info">
                     <ul>
                         <li>男 / 1991</li>
-                        <li>河南大学民生学院 / 统招本科</li>
+                        <li>河南大学 / 本科</li>
                     </ul>
                 </section>
                 <section class="contact">
@@ -216,7 +216,7 @@
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>基础工具建设与技术分享</span>
+                                    <span>基础工具建设</span>
                                 </header>
                                 <ul class="item-bd">
                                     <li>
@@ -234,27 +234,23 @@
                                     <li>
                                         负责项目需求的沟通与任务分解，安排组内工作进度，协调各端资源，推进项目进度
                                     </li>
-                                    <li>
-                                        负责组内技术分享，提升组内技术氛围，增强组内业务水平，
-                                        前端组一直是公司进度的排头兵，大大提高了项目进度周期的容错性
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="section-bd">
-                            <div class="item">
+                        <!-- <div class="section-bd"> -->
+                        <!-- <div class="item">
                                 <header class="item-hd">
                                     <h3 class="item-name">河南国基建筑设计院 (2014-2017)</h3>
                                 </header>
-                            </div>
-                            <!-- <div class="item">
+                            </div> -->
+                        <!-- <div class="item">
                                 <ul class="item-bd">
                                     <li>
                                         CAD 结构设计
                                     </li>
                                 </ul>
                             </div> -->
-                        </div>
+                        <!-- </div> -->
                     </section>
                     <section class="project">
                         <header class="section-hd">
