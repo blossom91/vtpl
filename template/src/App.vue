@@ -1,19 +1,27 @@
 <template>
-    <div id="app">
+    <div id="main">
         {{#router}}
-        <router-view/> {{else}}
-        <HelloWorld/> {{/router}}
+        <router-view/> 
+        {{else}}
+        <YSwitch/> 
+        {{/router}}
     </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld'
+{{#router}}
+export default {
+    name: 'App',
+}
+{{else}}
+import YSwitch from '@/components/YSwitch'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
+        YSwitch,
     },
 }
+{{/router}}
 </script>
 

@@ -70,12 +70,12 @@ module.exports = {
                 loader: 'babel-loader',
                 include: [resolve('src')],
             },
-            // 处理相应文件  小于2048b会被base打包而不会http请求
+            // 处理相应文件  小于3072b会被base打包而不会http请求
             {
                 test: /\.(png|jpe?g|gif|webp|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 2048,
+                    limit: 3072,
                     name: utils.assetsPath('img/[name].[hash:7].[ext]'),
                 },
             },
@@ -83,7 +83,7 @@ module.exports = {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 2048,
+                    limit: 3072,
                     name: utils.assetsPath('media/[name].[hash:7].[ext]'),
                 },
             },

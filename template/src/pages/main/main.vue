@@ -1,18 +1,14 @@
 <template>
-    <div id="app">
-        <h1>{{msg}}</h1>
+    <div class="main">
     </div>
 </template>
 
 <script>
-
 export default {
-    name: 'App',
-    data() {
-        return {
-            msg: 'hello',
-        }
-    },
+    name: 'Main',
 }
 </script>
 
+<style lang="less">
+
+</style>

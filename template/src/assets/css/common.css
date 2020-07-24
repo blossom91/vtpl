@@ -1,11 +1,12 @@
 /* 移动端设置 */
 html {
-    font-size: 16px;
+    font-size: 26.667vw;
 }
 
 body {
     user-select: none;
-    /* 如果不是纯移动端页面 需要设置下面参数 */
+    font-size: 16px;
+    /* 如果不是纯移动端页面(这时候不要使用vw布局) 需要设置下面参数 */
     /* max-width: 768px;
     margin: 0 auto; */
 }

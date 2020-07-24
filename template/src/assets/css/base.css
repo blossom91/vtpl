@@ -13,7 +13,7 @@ html {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation; /* 触摸动作也经常用于完全解决由支持双击缩放手势引起的点击事件的延迟。*/
@@ -28,7 +28,6 @@ body {
     /* 禁止微信字体放大 */
     text-size-adjust: 100% !important;
 }
-
 * {
     box-sizing: inherit;
 }

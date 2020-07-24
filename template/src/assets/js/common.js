@@ -1,50 +1,55 @@
 import '@/assets/css/base.css'
+import 'babel-polyfill'
 {{#mobile}}
 import '@/assets/css/common.css'
 
+const maxWidth = 540
+const scale = 3.75
 
-const setRemUnit = () => {
-    let html = document.documentElement
-    html.style.fontSize = 100 / 3.75 + 'vw'
-    let width = html.clientWidth
-    const set_width = width / 3.75
-    // const now_width = Number(document.documentElement.style.fontSize.slice(0, -2))
-    // if (set_width != now_width) {
-    //     document.documentElement.style.fontSize = width / 3.75 + 'px'
-    // }
-    // 安卓部分机型rem计算不准,二货安卓
-    let whileCount = 0
-    while (true) {
-        let settingFs = Number(html.style.fontSize.slice(0, -2))
-        let realFs = Number(window.getComputedStyle(html).fontSize.slice(0, -2))
-        let delta = realFs - set_width
-        if (Math.abs(delta) >= 0.5) {
-            if (delta > 0) {
-                // settingFs--
-                settingFs = settingFs - 0.3
-            } else {
-                // settingFs++
-                settingFs = settingFs + 0.3
-            }
-            // html.style.fontSize = settingFs + 'px'
-            html.style.fontSize = settingFs + 'vw'
-        } else {
-            break
-        }
-        if (whileCount++ > 30) {
-            break
-        }
-    }
-}
-// 根据环境运行一些逻辑
 if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-    //ios active失效问题
+    // ios active失效问题
     document.body.addEventListener('touchstart', () => {})
-    document.documentElement.style.fontSize = 100 / 3.75 + 'vw'
-} else if (/(Android)/i.test(navigator.userAgent)) {
-    setRemUnit()
-} 
-   
+    document.documentElement.style.fontSize = 100 / scale + 'vw'
+    if (/(iPad)/i.test(navigator.userAgent)) {
+        let width = document.documentElement.clientWidth
+        width = width > maxWidth ? maxWidth : width
+        document.documentElement.style.fontSize = width / scale + 'px'
+    }
+} else {
+    ;(function(doc, win) {
+        var pxOneRem = 0
+        var remClient = scale
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            // 计算html的font-size
+            recalc = function() {
+                var clientWidth = docEl.clientWidth
+                if (!clientWidth) return
+                // 这里定一个页面的最大宽度
+                clientWidth = clientWidth > maxWidth ? maxWidth : clientWidth
+                pxOneRem = clientWidth / remClient
+                docEl.style.fontSize = pxOneRem + 'px'
+                // 纠错函数
+                function adapt() {
+                    var d = window.document.createElement('div')
+                    d.style.width = '1rem'
+                    d.style.display = 'none'
+                    var head = window.document.getElementsByTagName('head')[0]
+                    head.appendChild(d)
+                    var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'))
+                    return defaultFontSize
+                }
+
+                pxOneRem = (pxOneRem * pxOneRem) / adapt()
+                docEl.style.fontSize = pxOneRem + 'px'
+            }
+        if (!doc.addEventListener) return
+        win.addEventListener(resizeEvt, recalc, false)
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+        //当dom加载完成时，或者 屏幕垂直、水平方向有改变进行html的根元素计算
+    })(document, window)
+}
+
 {{/mobile}}
 
 

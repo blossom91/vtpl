@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>{{ name }}</title>
-    <script>
-        document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px'
-    </script>
-</head>
-
-<body>
-    <div id="app"></div>
-</body>
-
+    <head>
+        <meta charset="utf-8" />
+        {{#mobile}}
+        <meta content="email=no" name="format-detection" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        {{else}}
+        <meta name="keywords" content="your keywords">
+        <meta name="description" content="your description">
+        <meta name="author" content="author,email address">
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="renderer" content="ie-stand">
+        {{/mobile}}
+        <title>{{ name }}</title>
+        {{#mobile}}
+        <script>
+            document.documentElement.style.fontSize = 100 / 3.75 + 'vw'
+        </script>
+        {{/mobile}}
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
 </html>
