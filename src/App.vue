@@ -51,8 +51,8 @@
                 </section>
                 <section class="info">
                     <ul>
-                        <li>男 / 1991</li>
-                        <li>河南大学民生学院 / 本科</li>
+                        <li>男 / 1991 / 14年毕业</li>
+                        <li>河南大学民生学院 (土木工程) / 统招本科 </li>
                     </ul>
                 </section>
                 <section class="contact">
@@ -139,7 +139,25 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2017-至今)</h3>
+                                    <h3 class="item-name">北京百度时代网络技术有限公司 (2020.7-至今)</h3>
+                                </header>
+                            </div>
+                            <div class="item">
+                               
+                                <ul class="item-bd">
+                                    <li>
+                                        负责 百度App Feed流的开发与维护工作
+                                    </li>
+                                    <li>
+                                        负责 百度App 直播相关业务的开发与维护工作
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-bd">
+                            <div class="item">
+                                <header class="item-hd">
+                                    <h3 class="item-name">北京与你科技有限公司 (2017.7-2020.6)</h3>
                                 </header>
                             </div>
                             <div class="item">
@@ -234,20 +252,21 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="section-bd"> -->
-                        <!-- <div class="item">
+                        <div class="section-bd">
+                            <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">河南国基建筑设计院 (2014-2017)</h3>
+                                    <h3 class="item-name">河南东方国际地产开发有限公司 (2014.9-2017.1)</h3>
                                 </header>
-                            </div> -->
-                        <!-- <div class="item">
+                            </div>
+                            <div class="item">
+                               
                                 <ul class="item-bd">
                                     <li>
-                                        CAD 结构设计
+                                        任职项目工程部门,负责CAD施工图的绘制与施工进度和质量的审查工作
                                     </li>
                                 </ul>
-                            </div> -->
-                        <!-- </div> -->
+                            </div>
+                        </div>
                     </section>
                     <section class="project">
                         <header class="section-hd">
@@ -329,6 +348,6 @@
 
 <script>
 export default {
-    name: 'App',
-}
+    name: 'App'
+};
 </script>
