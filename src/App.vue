@@ -7,7 +7,7 @@
 
 <template>
     <div id="app">
-        <p class="last-modified">最后更新于2017年9月</p>
+        <p class="last-modified">最后更新于2020年8月</p>
         <a class="download-pdf" href="resume.pdf">下载 PDF</a>
 
         <main class="content">
@@ -16,7 +16,7 @@
                 <section class="title">
                     <div class="name">
                         <h1>郭梦莉</h1>
-                        <h3 class="head-job">招采专员</h3>
+                        <h3 class="head-job">招标采购</h3>
                     </div>
                     <div class="job">
                         <img src="./guo.jpeg" style="width:120px" alt="" />
@@ -90,18 +90,16 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京中航建研航空设计咨询有限公司（2018.11 - 2019.04）</h3>
-                                    <!-- <span class="item-time">2016.09 - 2017.04</span> -->
-                                    <span class="item-time">咨询评审</span>
+                                    <h3 class="item-name">华润置地(北京)股份有限公司（2019. 5- 至今）</h3>
+                                    <span class="item-time">招采采购</span>
                                 </header>
                                 <div class="item-bd">
-                                    主要从事组织开展机场前期项目评审，如选址评审、总体规划评估、可研评估，并完成评审/评估报告等工作。
+                                    主要从事写字楼运营招采管理工作,包括工程维保招标,供应商管理等工作。
                                 </div>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">天职工程咨询股份有限公司 (2017.07 -2018.07)</h3>
-                                    <!-- <span class="item-time">2017.07 至今</span> -->
+                                    <h3 class="item-name">天职工程咨询股份有限公司 (2017.07 -2019.02)</h3>
                                     <span class="item-time">管理审计</span>
                                 </header>
                                 <div class="item-bd">
@@ -119,29 +117,20 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>山西大同云冈机场可研评估</span>
+                                    <span>华润时代中心</span>
                                 </header>
                                 <div class="item-bd">
                                     <ul>
-                                        <li>担任改项目负责人，组织评估会工作，编写可研评估报告等。</li>
+                                        <li>
+                                            担任华润时代中心招采负责人,负责项目单项目采购如电梯维保,多项目联合采购如外墙清洗等,所负责采购项满足合规要求,并节约成本
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>北汽福田汽车股份有限公司建设项目工程管理及效益审计</span>
-                                </header>
-                                <div class="item-bd">
-                                    <ul>
-                                        <li>担任该项目检查人员，负责招标采购检查等。</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>华夏幸福基业2017年项目营销及规划类招采管理检查</span>
+                                    <span>华夏幸福基业2017-2018年项目营销及规划类招采管理检查</span>
                                 </header>
                                 <div class="item-bd">
                                     <ul>
@@ -166,6 +155,7 @@
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="item">
                                 <header class="item-hd">
                                     <span>中粮置业有限公司中粮安定门项目全过程跟踪审计</span>
@@ -179,36 +169,23 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>华夏幸福基业股份有限公司华夏幸福2018成本招采第三方检查咨询服务</span>
-                                </header>
-                                <div class="item-bd">
-                                    <ul>
-                                        <li>华夏幸福招采季度检查，主要检查项目招标采购的合规性与合理性。</li>
-                                        <li>担任该项目检查人员，负责招标采购检查等。</li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </section>
                 </div>
 
                 <div class="content-right">
                     <section class="skill">
-                        <!-- <header class="section-hd"> -->
-                        <!-- <span class="section-title-l"></span> -->
-                        <!-- <h2 class="section-title"></h2> -->
-                        <!-- <span class="section-title-r"></span> -->
-                        <!-- </header> -->
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>大连机场围界及安防系统改造工程可研评估</span>
+                                    <span>阿里巴巴基建项目管理审计</span>
                                 </header>
                                 <div class="item-bd">
                                     <ul>
-                                        <li>担任改项目负责人，组织评估会工作，编写可研评估报告等。</li>
+                                        <li>
+                                            对阿里巴巴的基建项目进行招采检查，主要检查项目招标采购的合理性、合规性。
+                                        </li>
+                                        <li>担任本项目检查人员。</li>
                                     </ul>
                                 </div>
                             </div>
@@ -236,27 +213,14 @@
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>中粮广场改造项目招采专项检查</span>
+                                    <span>北汽福田汽车股份有限公司建设项目工程管理及效益审计</span>
                                 </header>
                                 <div class="item-bd">
                                     <ul>
-                                        <li>对中粮广场改造项目进行招采检查，主要检查项目招标采购的合规性与合理性。</li>
-                                        <li>参与本项目招采部分检查，对项目采购的全过程进行审计。</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>阿里巴巴基建项目管理审计</span>
-                                </header>
-                                <div class="item-bd">
-                                    <ul>
-                                        <li>
-                                            对阿里巴巴的基建项目进行招采检查，主要检查项目招标采购的合理性、合规性。
-                                        </li>
-                                        <li>担任本项目检查人员。</li>
+                                        <li>担任该项目检查人员，负责招标采购检查等。</li>
                                     </ul>
                                 </div>
                             </div>
@@ -272,15 +236,11 @@
                         <div class="section-bd">
                             <div class="item">
                                 <div class="item-bd">
-                                    <header class="item-hd">
-                                        <!-- <span class="item-time">业务能力</span> -->
-                                    </header>
                                     <ul class="section-content">
                                         <li>熟练掌握office办公软件。</li>
-                                        <li>熟悉房地产开发项目的建设程序、管理重点。</li>
-                                        <li>具备多项目管理审计实施经验，熟悉国家的相关法律法规。</li>
+                                        <li>具备多项目招采审计实施经验，熟悉国家的相关法律法规。</li>
                                         <li>
-                                            对工程建设整个过程中的招投标、工程建设管理、质量管理等具有丰富的管理和实践经验。
+                                            具有招标采购经验,熟悉招标采购工作重难点。
                                         </li>
                                     </ul>
                                 </div>
@@ -300,7 +260,7 @@
                                         <!-- <span class="item-time">业务能力</span> -->
                                     </header>
                                     <ul class="section-content">
-                                        <li>对工程管理行业有浓厚兴趣，关注法律法规动态。</li>
+                                        <li>善于沟通。</li>
                                         <li>工作态度认真负责，具有团队合作精神。</li>
                                         <li>学习能力强，逻辑清晰。</li>
                                     </ul>
@@ -319,7 +279,6 @@
 
 <script>
 export default {
-    name: 'App',
-}
+    name: 'App'
+};
 </script>
-
