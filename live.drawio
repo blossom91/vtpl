@@ -1,43 +1,43 @@
-<mxfile host="app.diagrams.net" modified="2020-10-21T06:29:36.410Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="Z8ykkWZZJbUThgGndk5Z" version="13.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-21T06:32:25.919Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" etag="EmYbgcW84Nm5GmyIbezj" version="13.8.1" type="github">
   <diagram id="RWPBs4uOodPee7Fzwkq9" name="Page-1">
     <mxGraphModel dx="2129" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-1" target="8pz3R6k3C9z9AXxEnaZ6-7">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-1" target="8pz3R6k3C9z9AXxEnaZ6-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-1" value="pc开播工具（采流压缩推流）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="355" y="100" width="170" height="50" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-1" value="pc开播工具（采流压缩推流）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="100" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-7" target="8pz3R6k3C9z9AXxEnaZ6-9">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-7" target="8pz3R6k3C9z9AXxEnaZ6-9" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-7" value="server端流中转分发（cdn）&lt;br&gt;mis平台控制各种直播间参数设置挂件礼物配置等" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="302.5" y="210" width="275" height="50" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-7" value="server端流中转分发（cdn）&lt;br&gt;mis平台控制各种直播间参数设置挂件礼物配置等" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="302.5" y="190" width="275" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-11">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-11" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="330" y="420" as="targetPoint" />
+            <mxPoint x="160" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-24">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-24" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="505" y="390" />
-              <mxPoint x="735" y="390" />
+              <mxPoint x="580" y="360" />
+              <mxPoint x="735" y="360" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-18">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-9" target="8pz3R6k3C9z9AXxEnaZ6-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-9" value="cdn拉流" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="375" y="330" width="130" height="40" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-9" value="cdn拉流" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="280" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-11" target="8pz3R6k3C9z9AXxEnaZ6-16">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-11" target="8pz3R6k3C9z9AXxEnaZ6-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="290" y="590" as="targetPoint" />
             <Array as="points">
@@ -46,39 +46,39 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-11" value="hls协议（目前h5直播业务使用）&lt;br&gt;m3u8 =&amp;gt; xxxxx.ts" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="410" width="210" height="60" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-11" value="hls协议（目前h5直播业务使用）&lt;br&gt;m3u8 =&amp;gt; xxxxx.ts" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="15" y="400" width="210" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-16" value="支持两种类型：&lt;br&gt;&lt;span&gt;全量点播模式：m3u8内包含所有视频资源文件，可获取视频总长度&lt;br&gt;动态直播模式： m3u8中包含动态的ts文件地址，无法获知总长度&lt;br&gt;&lt;br&gt;优点：移动端兼容性最好，video标签可直接使用，业务需求要支持移动端，最主流简单的解决方案&lt;br&gt;&lt;/span&gt;缺点：因为切片ts文件，会导致大约一个ts文件视频长度的延迟，实时性不太好，互动性要求高的场景不合适" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-40" y="550" width="320" height="180" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-16" value="支持两种类型：&lt;br&gt;&lt;span&gt;全量点播模式：m3u8内包含所有视频资源文件，可获取视频总长度&lt;br&gt;动态直播模式： m3u8中包含动态的ts文件地址，无法获知总长度&lt;br&gt;&lt;br&gt;优点：移动端兼容性最好，video标签可直接使用，业务需求要支持移动端，最主流简单的解决方案&lt;br&gt;&lt;/span&gt;缺点：因为切片ts文件，会导致大约一个ts文件视频长度的延迟，实时性不太好，互动性要求高的场景不合适" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="520" width="320" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-18" target="8pz3R6k3C9z9AXxEnaZ6-19">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-18" target="8pz3R6k3C9z9AXxEnaZ6-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-18" value="flv协议（NA端使用）&lt;br&gt;&amp;nbsp;flv =&amp;gt; media source extensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="325" y="410" width="230" height="60" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-18" value="flv协议（NA端使用）&lt;br&gt;&amp;nbsp;flv =&amp;gt; media source extensions" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="325" y="400" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-19" value="&lt;span&gt;&lt;br&gt;&lt;br&gt;优点：&lt;/span&gt;基于http长连接方案，实时性比较好&lt;br&gt;缺点：依赖mse api导致兼容性不够好，目前主要在端上和pc使用&lt;br&gt;&lt;br&gt;后续pc端考虑整体使用" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="555" width="240" height="110" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-19" value="&lt;span&gt;&lt;br&gt;&lt;br&gt;优点：&lt;/span&gt;基于http长连接方案，实时性比较好&lt;br&gt;缺点：依赖mse api导致兼容性不够好，目前主要在端上和pc使用&lt;br&gt;&lt;br&gt;后续pc端考虑整体使用" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="520" width="240" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-24" target="8pz3R6k3C9z9AXxEnaZ6-27">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-24" target="8pz3R6k3C9z9AXxEnaZ6-27" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="900" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-24" value="聊天室消息协议&lt;br&gt;（h5直播业务使用）&lt;br&gt;m3u8协议cdn拉取模式" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="650" y="410" width="170" height="60" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-24" value="聊天室消息协议&lt;br&gt;（h5直播业务使用）&lt;br&gt;m3u8协议cdn拉取模式" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="620" y="400" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-27" target="8pz3R6k3C9z9AXxEnaZ6-29">
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8pz3R6k3C9z9AXxEnaZ6-27" target="8pz3R6k3C9z9AXxEnaZ6-29" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1005" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-27" value="m3u8 =&amp;gt; ts =&amp;gt; 资源处理&lt;br&gt;优点： 实现简单，兼容性好，消息拉取稳定性好&lt;br&gt;缺点：实时性很差，没有聊天互动性，目前线上业务大约有4-8s左右消息同步延迟" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="630" y="530" width="210" height="95" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-27" value="m3u8 =&amp;gt; ts =&amp;gt; 资源处理&lt;br&gt;优点： 实现简单，兼容性好，消息拉取稳定性好&lt;br&gt;缺点：实时性很差，没有聊天互动性，目前线上业务大约有4-8s左右消息同步延迟" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="520" width="230" height="95" as="geometry" />
         </mxCell>
-        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-29" value="考虑pc端的使用场景，后续可根据业务需求优化使用websocket协议的消息同步,对于礼物效果，主播互动效果提升明显，此优化比较依赖server端支持" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="665" width="230" height="60" as="geometry" />
+        <mxCell id="8pz3R6k3C9z9AXxEnaZ6-29" value="考虑pc端的使用场景，后续可根据业务需求优化使用websocket协议的消息同步,对于礼物效果，主播互动效果提升明显，此优化比较依赖server端支持" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="640" width="230" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
