@@ -1,0 +1,212 @@
+// 背景图
+.coverimg() {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// 全局字号调整
+.font-size-change() {
+    .font-scale(@font-size, @line-height, @font-scale: 1) {
+        font-size: @font-size / @font-base * @font-scale;
+        line-height: @line-height / @font-base * @font-scale;
+    }
+
+    .font-size-0 & {
+        .font-scale(42px, 66px);
+    }
+
+    .font-size-1 & {
+        .font-scale(51px, 78px);
+    }
+
+    .font-size-2 & {
+        .font-scale(57px, 78px);
+    }
+
+    .font-size-3 & {
+        .font-scale(63px, 84px);
+    }
+
+    @media screen and (max-width: 360px) {
+        .font-size-0 & {
+            .font-scale(42px, 66px, .9);
+        }
+
+        .font-size-1 & {
+            .font-scale(51px, 78px, .9);
+        }
+
+        .font-size-2 & {
+            .font-scale(57px, 78px, .9);
+        }
+
+        .font-size-3 & {
+            .font-scale(63px, 84px, .9);
+        }
+    }
+}
+
+// 夜间模式替换背景图
+.nightmode(@icon, @flag: true, @join: false) when (@flag = false) {
+    background-image: url('@{icon-path}/@{icon}');
+}
+.nightmode(@icon, @flag: true, @join: false) when (@flag = true) and (@join = false) {
+    background-image: url('@{icon-path}/@{icon}');
+
+    @{selector-night} & {
+        background-image: url('@{icon-path}/nightmode-@{icon}');
+    }
+}
+.nightmode(@icon, @flag: true, @join: false) when (@flag = true) and (@join = true) {
+    background-image: url('@{icon-path}/@{icon}');
+
+    .nightmode& {
+        background-image: url('@{icon-path}/nightmode-@{icon}');
+    }
+}
+
+// 熊掌占位图
+.placeholder() {
+    .theme-image('bd-logo.png');
+}
+
+// mixin: 复合属性radius不同media下的运算
+.calc-radius(@radius: 0, @ratio: 1) {
+    each(@radius, {
+        border-radius+_: extract(@radius, @key) * @ratio;
+    });
+}
+
+// 1px 边框说明: position有效值为 [top, right, bottom, left, around]; position为around 时圆角 radius 有效显示四条边
+.hairline(@position: bottom, @color: #000, @radius: 0) when (@position = around) {
+    position: relative;
+    overflow: visible;
+    border: 1px solid @color;
+    border-radius: @radius;
+    .hairline-nightmode();
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),
+        (-webkit-max-device-pixel-ratio: 1.5),
+        (min-resolution: 1.2dppx),
+        (max-resolution: 1.5dppx) {
+        .hairline-media(1.5, @position);
+
+        &::after {
+            border: 1px solid @color;
+            .calc-radius(@radius, 1.5);
+            // border-radius: @radius * 1.5;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx) {
+        .hairline-media(2, @position);
+
+        &::after {
+            border: 1px solid @color;
+            .calc-radius(@radius, 2);
+            // border-radius: @radius * 2;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+        (min-resolution: 3dppx) {
+        .hairline-media(3, @position);
+
+        &::after {
+            border: 1px solid @color;
+            .calc-radius(@radius, 3);
+            // border-radius: @radius * 3;
+        }
+    }
+}
+.hairline(@position: bottom, @color: #000) when not (@position = around) {
+    position: relative;
+    border: 1px solid transparent;
+    border-@{position}-color: @color;
+    .hairline-nightmode();
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),
+        (-webkit-max-device-pixel-ratio: 1.5),
+        (min-resolution: 1.2dppx),
+        (max-resolution: 1.5dppx) {
+        .hairline-media(1.5, @position);
+
+        &::after {
+            border: 1px solid transparent;
+            border-@{position}-color: @color;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx) {
+        .hairline-media(2, @position);
+
+        &::after {
+            border: 1px solid transparent;
+            border-@{position}-color: @color;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+        (min-resolution: 3dppx) {
+        .hairline-media(3, @position);
+
+        &::after {
+            border: 1px solid transparent;
+            border-@{position}-color: @color;
+        }
+    }
+}
+
+// 绝对定位或固定定位填充满父元素或祖父元素
+.fullfill(@position: absolute) {
+    position: @position;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// 容器内容居中
+.centerfy(@direction: row) {
+    display: flex;
+    flex-direction: @direction;
+    align-items: center;
+    justify-content: center;
+}
+
+// 多行截断
+.line-clamp(@line: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+// 单行截断
+.ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+// 清除浮动
+.clearfix() {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// 生成纯色填充的svg背景图
+.svg-background(@color: #fff) {
+    @svg: escape('<svg xmlns="http://www.w3.org/2000/svg"><rect fill="@{color}" width="100%" height="100%"/></svg>');
+
+    background-image: url('data:image/svg+xml;charset=utf8,@{svg}');
+}

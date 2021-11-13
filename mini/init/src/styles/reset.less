@@ -1,0 +1,192 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+address,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+
+    /* !* 禁止选择文本 *! */
+    -webkit-user-select: none;
+
+    /* !* 禁止IOS系统上点击触发反馈 *! */
+
+    -webkit-tap-highlight-color: rgba(51, 133, 255, 0);
+
+    /* !* 避免屏幕旋转导致字体大小缩放 *! */
+    -webkit-text-size-adjust: 100%;
+
+    /* 触摸动作也经常用于完全解决由支持双击缩放手势引起的点击事件的延迟。 */
+    touch-action: manipulation;
+
+    /* !* 禁止设备弹出列表按钮 *! */
+    -webkit-touch-callout: none;
+    font-family: 'STHeiti SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ===typography=== */
+
+a {
+    text-decoration: none;
+    outline: 0;
+    background-color: transparent;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+fieldset,
+img {
+    border: none;
+}
+
+/* ===form=== */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: middle;
+    -webkit-user-select: auto;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* ===table=== */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+/* ios下的safari，会出现莫名其妙的阴影，圆角，所以要重置下 */
+input,
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+a,
+button,
+input {
+    /* -webkit-tap-highlight-color: rgba(255, 0, 0, 0); */
+    -webkit-user-select: auto;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}

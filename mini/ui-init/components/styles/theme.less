@@ -1,0 +1,188 @@
+/**
+ * @file theme 主题
+ * @author bdapp-fe<bdapp-fe@baidu.com>
+ */
+
+// 是否使用原生CSS变量，默认false
+@use-cssvar: false;
+// 是否支持多种模式：默认模式，暗黑模式，夜间模式；false 时只支持默认模式
+@multi-mode: true;
+// 是否支持暗黑模式, @multi-mode 为 true 时有效
+@dark-mode: true;
+// 是否支持夜间模式, @multi-mode 为 true 时有效
+@night-mode: false;
+// 主题颜色全局选择器，定义在根元素上，默认根元素html，可通过赋值改变
+@selector-root: html;
+// 日间模式 类选择器 可用于暗黑模式下部分区域依旧需要保持日间模式的情况
+@selector-default: '';
+// 深色模式 类选择器
+@selector-dark: .darkmode;
+// 夜间模式 类选择器
+@selector-night: .nightmode;
+
+// 主题图标路径
+@image-path: '../assets/img';
+
+.use-cssvar() when(@use-cssvar = true) {
+}
+
+// mixin: 生成文字颜色
+.theme-color(@code) when (@use-cssvar = true) {
+}
+.theme-color(@code) when (@use-cssvar = false) {
+    .wuji-color(@code);
+}
+
+// mixin: 生成svg填充颜色
+.theme-fill(@code) when (@use-cssvar = true) {
+}
+.theme-fill(@code) when (@use-cssvar = false) {
+    .wuji-fill(@code);
+}
+
+// mixin: 生成背景颜色
+.theme-background(@code) when (@use-cssvar = true) {
+}
+.theme-background(@code) when (@use-cssvar = false) {
+    .wuji-background-color(@code);
+}
+
+// mixin: 生成边框颜色
+.theme-border(@code) when (@use-cssvar = true) {
+}
+.theme-border(@code) when (@use-cssvar = false) {
+    .wuji-border-color(@code);
+}
+
+// mixin: 根元素注入默认color、background-color, 默认根元素html
+.theme-root() {
+    .wuji-root();
+}
+
+// hack: 安卓夜间模式1px看不清，通过在伪元素:after上定义rgba颜色后再微调透明度
+.hairline-nightmode() {
+    @{selector-night} &:after {
+        border-color: rgba(0,0,0,0.9);
+        background-color: rgba(0,0,0,0.01);
+        opacity: .3;
+    }
+}
+
+// 根据media query缩放，dpr: 1.5、2、3
+.hairline-media(@dpr, @position) {
+    border: none;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        width: @dpr * 100%;
+        height: @dpr * 100%;
+        transform: scale(1 / @dpr);
+        transform-origin: 0 0;
+    }
+}
+
+// mixin: 使用色表编号的1px边框，不支持自定义颜色，自定义颜色可使用.hairline(...)
+.theme-hairline(@position, @code: GC34, @radius: 0) when (@position = around) {
+    position: relative;
+    overflow: visible;
+    border-radius: @radius;
+    .theme-border(@code);
+    .hairline-nightmode();
+
+    &,
+    &:after {
+        border: 1px solid;
+        .theme-border(@code);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),
+        (-webkit-max-device-pixel-ratio: 1.5),
+        (min-resolution: 1.2dppx),
+        (max-resolution: 1.5dppx) {
+        .hairline-media(1.5, @position);
+        &:after {
+            .calc-radius(@radius, 1.5);
+            // border-radius: @radius * 1.5;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx) {
+        .hairline-media(2, @position);
+        &:after {
+            .calc-radius(@radius, 2);
+            // border-radius: @radius * 2;
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+        (min-resolution: 3dppx) {
+        .hairline-media(3, @position);
+        &:after {
+            .calc-radius(@radius, 3);
+            // border-radius: @radius * 3;
+        }
+    }
+}
+.theme-hairline(@position: bottom, @code: GC34) when not (@position = around) {
+    position: relative;
+    .hairline-nightmode();
+
+    &,
+    &:after {
+        border-@{position}: 1px solid;
+        .theme-border(@code);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.2),
+        (-webkit-max-device-pixel-ratio: 1.5),
+        (min-resolution: 1.2dppx),
+        (max-resolution: 1.5dppx) {
+        .hairline-media(1.5, @position);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx) {
+        .hairline-media(2, @position);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+        (min-resolution: 3dppx) {
+        .hairline-media(3, @position);
+    }
+}
+
+// mixin: 不同主题下背景图路径
+.theme-image(@image, @light: true, @night: true, @dark: true, @base64: false) {
+    @output4light: if(@light = true, {
+        @img: '@{image-path}/@{image}';
+        @url: if(@base64 = true, data-uri(@img), url(@img));
+        background-image: @url;
+    }, {});
+
+    @output4dark: if(@dark = true, {
+        @img: '@{image-path}/darkmode-@{image}';
+        @url: if(@base64 = true, data-uri(@img), url(@img));
+        @{selector-dark} & {
+            background-image: @url;
+        }
+    }, {});
+
+    @output4night: if(@night = true, {
+        @img: '@{image-path}/nightmode-@{image}';
+        @url: if(@base64 = true, data-uri(@img), url(@img));
+        @{selector-night} & {
+            background-image: @url;
+        }
+    }, {});
+
+    @output4light();
+
+    @output4dark();
+
+    @output4night();
+}

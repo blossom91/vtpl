@@ -1,0 +1,8 @@
+{
+    "status": 0,
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        "room_id": 123
+    }
+}

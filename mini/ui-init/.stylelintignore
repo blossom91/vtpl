@@ -1,0 +1,3 @@
+# theme.less 中 .theme-image 定义的 if 可以按预期的执行，但是无法通过stylelint检查
+theme.less
+output

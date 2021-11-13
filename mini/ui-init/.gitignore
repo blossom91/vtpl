@@ -1,0 +1,16 @@
+.idea/
+.DS_Store
+issue.info
+log/*
+www/static/*
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+._*
+*.swp
+*.swo
+.env
+.vscode
+yarn.lock
+output/

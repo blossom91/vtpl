@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="dns-prefetch" href="//mbdp02.bdstatic.com">
+    <% if (htmlWebpackPlugin.options.noReferrer) { %>
+        <!-- 不带referrer-->
+        <meta name="referrer" content="no-referrer">
+    <% } %>
+    <% if (htmlWebpackPlugin.options.shortcut) { %>
+        <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.shortcut %>" type="image/x-icon">
+    <% } else { %>
+        <link rel="shortcut icon" href="https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/img/screen_icon.png" type="image/x-icon">
+    <% } %>
+    <link rel="apple-touch-icon-precomposed" href="https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/img/screen_icon.png">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!--注入css by html-webpack-plugin-->
+    <%= htmlWebpackPlugin.tags.headTags %>
+</head>
+
+<body>
+
+<!--参数提示-->
+<% if (htmlWebpackPlugin.options.paramCheckScript) { %>
+    <%= htmlWebpackPlugin.options.paramCheckScript %>
+<% } %>
+
+<!--html font size响应 by rem-->
+<script type="text/javascript">
+    !function(i,e){var d=i.documentElement,n="orientationchange"in window?"orientationchange":"resize",t=function(){var n=d.clientWidth;if(n){var t=n/<%= htmlWebpackPlugin.options.viewport %>;d.style.fontSize=100*t+"px",setTimeout(function(){var e=document.createElement("div");e.style.width="<%= htmlWebpackPlugin.options.viewport / 100 %>rem",i.body.appendChild(e),i.documentElement.style.fontSize=n/e.clientWidth*t*100+"px",i.body.removeChild(e)},0)}};t(),i.addEventListener&&(e.addEventListener(n,t,!1),i.addEventListener("DOMContentLoaded",t,!1))}(document,window)
+</script>
+
+<div id="root"></div>
+
+<!-- 注入页面数据 by smarty -->
+<script type="text/javascript" id="_page_data">
+    <%= htmlWebpackPlugin.options.pageDataTpl %> !function(){document.querySelector('body').removeChild(document.querySelector('#_page_data'))}();
+</script>
+
+<% if (htmlWebpackPlugin.options.hmSiteId) { %>
+    <script>
+    var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?<%= htmlWebpackPlugin.options.hmSiteId %>";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();
+    </script>
+<% } %>
+
+<!--注入chunks by html-webpack-plugin-->
+<%= htmlWebpackPlugin.tags.bodyTags %>
+<% if ('production' != htmlWebpackPlugin.options.__internal.env && htmlWebpackPlugin.options.debugger) { %>
+    <!--debugger-->
+    <script type="text/javascript" src="https://code.bdstatic.com/npm/eruda@1.5.6/eruda.min.js"></script><%= htmlWebpackPlugin.options.__internal.debugger.pluginSrc %>
+    <script type="text/javascript">
+        eruda.init({useShadowDom: true});<%= htmlWebpackPlugin.options.__internal.debugger.pluginAddCall %>
+    </script>
+<% } %>
+</body>
+</html>
