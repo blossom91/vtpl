@@ -58,8 +58,13 @@
         "node": ">= 6.0.0",
         "npm": ">= 3.0.0"
     },
-    "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ],
     "dependencies": {
-        "vue": "^2.5.16"
+        "vue": "^2.5.16",
+        "vue-hot-reload-api": "^2.3.4"
     }
 }

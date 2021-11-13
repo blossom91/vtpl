@@ -18,7 +18,6 @@
 }
 .demo-img {
     width: 80%;
-    max-height: 80%;
     margin-left: 10%;
 }
 .demo2-img {
@@ -33,7 +32,7 @@
 
 <template>
     <div id="app">
-        <p class="last-modified">最后更新于2019年8月</p>
+        <p class="last-modified">最后更新于2021年11月</p>
         <a class="download-pdf" href="resume.pdf">下载 PDF</a>
 
         <main class="content">
@@ -52,7 +51,7 @@
                 <section class="info">
                     <ul>
                         <li>男 / 1991 / 14年毕业</li>
-                        <li>河南大学民生学院 (土木工程) / 统招本科 </li>
+                        <li>河南大学民生学院 / 统招本科</li>
                     </ul>
                 </section>
                 <section class="contact">
@@ -101,30 +100,21 @@
                                     </li>
                                     <li>
                                         熟练掌握类与⾯向对象的编程思想，理解函数式编程，具备在⼯作中封装、优化、重构项⽬代码的能⼒，
-                                        具备良好的编码⻛格
+                                        熟悉常用MVVM框架,并了解核心实现原理,可应对大型项目性能挑战,熟悉前端音视频业务需求场景,对HLS/HTTP-FLV封装,H264/H265编码都有所研究
                                     </li>
                                     <li>
-                                        熟练掌握 Webpack 原理，实现过 Webpack 核⼼功能，理解 AST 运行机制，对 loader 和
-                                        plugin 有深⼊理解，便于扩展前端项目的工具化，提高开发效率
+                                        熟练掌握 Webpack 原理，理解 AST 运行机制，对 loader 和 plugin
+                                        有深⼊理解，掌握前端与客户端通信原理，可基于底层实现两端通信的 Bridge
+                                        框架,并封装基于 Tree Shaking 的 npm 包管理快速迭代
                                     </li>
                                     <li>
-                                        熟练掌握 Vue 技术栈及其原理，深度使用 Vue 相关生态，对 Vue 响应式，数据绑定，
-                                        render，Diff，createElement等核心功能都有所研究，方便快速开发项目，排查问题
+                                        掌握 Node、Python 等后端编程语言，熟悉 TCP、HTTP、WebSocket 网络协议， 深入理解
+                                        RESTful 设计思想，能够设计符合 RESTful 风格的 API, 理解 SSR 原理，了解服务端渲染
                                     </li>
                                     <li>
-                                        理解前端与移动端通信原理，可实现用于两端通信的 Bridge 基础框架，基于 iframe
-                                        做降级兼容，Android 基于 addJavascriptInterface，iOS 基于 userContentController
-                                        实现更现代化的调用机制，通过 npm 做 Bridge 包管理模块， 提高开发效率
-                                    </li>
-
-                                    <li>
-                                        掌握 Node、Python 等后端编程语言，熟悉HTTP/TCP网络协议，
-                                        能使用Socket实现基本的HTTP server，理解 SSR 基本原理，了解服务端渲染
-                                    </li>
-                                    <li>
-                                        熟悉操作系统基本知识，如寄存器，虚拟机，逻辑门电路，图形渲染展示，
-                                        图像压缩，进程，线程，协程等，熟悉基本的 数据结构，了解相应的时间复杂度，
-                                        并能实现 链表 栈 队列 哈希表 二叉树等常见结构
+                                        熟悉计算机基本知识，如寄存器，虚拟机，逻辑门电路，图形渲染，音频播放,音视频压缩等
+                                        熟练掌握常用的数据结构，了解相应的时间空间复杂度。能够实现 链表、队列、栈、
+                                        Hashtable 深入理解操作系统的多线程，多进程，以及编程语言提供的异步的实现原理
                                     </li>
                                 </ul>
                             </div>
@@ -137,37 +127,56 @@
                             <span class="section-title-r"></span>
                         </header>
                         <div class="section-bd">
+                            <header class="item-hd">
+                                <h3 class="item-name">北京百度时代网络技术有限公司 (2020.7-至今)</h3>
+                            </header>
                             <div class="item">
                                 <header class="item-hd">
-                                    <h3 class="item-name">北京百度时代网络技术有限公司 (2020.7-至今)</h3>
+                                    <a href="https://live.baidu.com/" target="_blank">百度直播业务</a>
                                 </header>
-                            </div>
-                            <div class="item">
-                               
                                 <ul class="item-bd">
-                                    <li>
-                                        负责 百度App Feed流的开发与维护工作
-                                    </li>
-                                    <li>
-                                        负责 百度App 直播相关业务的开发与维护工作
-                                    </li>
+                                    <li>负责 百度App/百家号 直播相关业务, 包括:</li>
+                                    <li>端内Feed直播频道, 直播间内半屏页, 主播信息页, 预约页等</li>
+                                    <li>端外PC/H5主站, 直播间分享页, 重大直播活动保障工作</li>
+                                    <li>各垂类直播运营活动项目</li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <header class="item-hd">
+                                    <a href="https://live.baidu.com/m/media/pclive/pctool/download.html" target="_blank"
+                                        >百度直播伴侣</a
+                                    >
+                                </header>
+                                <ul class="item-bd">
+                                    <li>与YY团队共建主播PC开播工具,基于QT开发,C++实现底层视频编解码</li>
+                                    <li>上层完全基于Web开发, 实现登录, 聊天公屏, 画面采集渲染等基础功能</li>
+                                    <li>基于产品需求,实现礼物特效,ppt演示,多人连麦,预约直播等业务功能</li>
+                                    <li>支持rtmp与webrtc两种推流协议,满足不同直播场景需求</li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>其他</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>主导组内Web播放器的开发工作,封装各类功能插件,基于wasm支持H265编码</li>
+                                    <li>主导组内基于无极UI风格的React组件库,负责组内效率工具/脚手架的维护工作</li>
+                                    <li>工作期间获得2次季度团队奖,2次季度个人奖,并主导提交专利一篇</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="section-bd">
-                            <div class="item">
-                                <header class="item-hd">
-                                    <h3 class="item-name">北京与你科技有限公司 (2017.7-2020.6)</h3>
-                                </header>
-                            </div>
+                            <header class="item-hd">
+                                <h3 class="item-name">北京与你科技有限公司 (2017.7-2020.6)</h3>
+                            </header>
                             <div class="item">
                                 <header class="item-hd">
                                     <a href="https://www.uneed.com" target="_blank">与你IM桌面版</a>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>
-                                        参与并主导与你IM桌面端的开发工作，项目基于 Electron 做跨平台开发
-                                    </li>
+                                    <li>主导与你IM桌面端的开发工作，项目基于 Electron 做跨平台开发</li>
                                     <li>
                                         基于 Vue 做渲染层处理，Rxjs 做状态管理，SQLite 做数据持久化，Websocket
                                         实现通信机制
@@ -178,10 +187,6 @@
                                     </li>
                                     <li>
                                         基于oss实现断点上传与分片下载，实现云端文件音视频播放，实现Electron全量更新与增量更新等自动更新功能
-                                    </li>
-                                    <li>
-                                        基于严格的 eslint
-                                        代码规范和模块化管理，保证了良好的代码结构和功能隔离，实现了快速的迭代开发
                                     </li>
                                 </ul>
                             </div>
@@ -203,67 +208,27 @@
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>后台管理项目</span>
+                                    <span>后台项目</span>
                                 </header>
                                 <ul class="item-bd">
+                                    <li>主导后台管理系统，实现账号权限系统，根据不同部门人员实现相应功能需求</li>
                                     <li>
-                                        参与设计后台管理系统，实现账号权限系统，根据不同部门人员实现相应功能需求
+                                        实现自动部署，代码回滚，发布日志，App版本管理，版本灰度管理，用户资料审核，用户数据统计，用户封禁，活动监测，通知管理等各类模块
                                     </li>
                                     <li>
-                                        包括自动部署，代码回滚，发布日志，App版本管理，版本灰度管理，用户资料审核，用户数据统计，用户封禁，活动监测，通知管理等各类模块
-                                    </li>
-                                    <li>项目基于 Vue 渲染层，Vue-Router 路由管理，Iview UI组件库</li>
-                                </ul>
-                            </div>
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>移动端项目</span>
-                                </header>
-                                <ul class="item-bd">
-                                    <li>
-                                        负责与你客户端内嵌的H5项目，包含了钱包，红包，群组小应用，各种功能模块和活动页面的开发工作
-                                    </li>
-                                    <li>
-                                        基于 npm 维护一套仿小程序api的内部 Bridge
-                                        封装包，并维护文档的及时更新便于内部各端使用
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>基础工具建设</span>
-                                </header>
-                                <ul class="item-bd">
-                                    <li>
-                                        开发内部效率工具 upack，实现客户端更新本地前端项目包，
-                                        实现远端项目的打包发布逻辑
-                                    </li>
-                                    <li>
-                                        实现基于 Webpack 构建的前端多环境使用的配置化脚手架工具
-                                    </li>
-                                    <li>
-                                        参与并主导了基于 Docker Drone 部署 gitlab runner 执⾏ CI<br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解决客户端自动打包，i18n项目自动编译发布，
-                                        服务端自动测试等场景需求，提高了客户端打包效率，极大降低服务端发布服务的故障率
-                                    </li>
-                                    <li>
-                                        负责项目需求的沟通与任务分解，安排组内工作进度，协调各端资源，推进项目进度
+                                        主导了基于 Docker Drone 部署 gitlab runner 执⾏ CI,
+                                        解决客户端自动打包，i18n项目自动编译发布， 服务端自动测试等场景需求
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="section-bd">
+                            <header class="item-hd">
+                                <h3 class="item-name">河南东方国际地产开发有限公司 (2014.9-2017.5)</h3>
+                            </header>
                             <div class="item">
-                                <header class="item-hd">
-                                    <h3 class="item-name">河南东方国际地产开发有限公司 (2014.9-2017.1)</h3>
-                                </header>
-                            </div>
-                            <div class="item">
-                               
                                 <ul class="item-bd">
-                                    <li>
-                                        任职项目工程部门,负责CAD施工图的绘制与施工进度和质量的审查工作
-                                    </li>
+                                    <li>任职项目工程部门,负责CAD施工图的绘制与施工进度和质量的审查工作</li>
                                 </ul>
                             </div>
                         </div>
@@ -278,29 +243,41 @@
                         <div class="section-bd">
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>图形学学习</span>
+                                    <span>图形与游戏</span>
                                 </header>
                                 <ul class="item-bd">
+                                    <li>
+                                        基于Canvas实现关卡编辑、场景切换、分数系统、重力系统、按键响应以及粒子爆炸特效等
+                                    </li>
                                     <li>
                                         基于图形学原理从零实现世界坐标系 模型坐标系 视口坐标系的三维转换，完成各 mesh 的
                                         三维模型渲染
                                     </li>
+                                    <li>实现光栅化渲染，色彩过渡，背面剔除优化与三角形平面模式的光线效果</li>
                                     <li>
-                                        实现光栅化渲染，色彩过渡，背面剔除优化与三角形平面模式的光线效果
+                                        了解计算音视频压缩处理逻辑, 可基于DCT实现有损压缩,
+                                        了解计算机基于采样和频率,谐波的音频生成逻辑
                                     </li>
                                 </ul>
                             </div>
                             <div class="item">
                                 <header class="item-hd">
-                                    <span>音视频压缩学习</span>
+                                    <span>编译器与虚拟机</span>
                                 </header>
                                 <ul class="item-bd">
-                                    <li>
-                                        基于离散余弦变换做时频域转换，过滤高频信号，基于 LZW 算法实现图片压缩
-                                    </li>
-                                    <li>
-                                        基于图片压缩的基础上，利用关键帧差值计算，实现视频压缩
-                                    </li>
+                                    <li>实现自定义CPU指令集、寄存器、寻址模式、内存读写, 字符编码(基于ASCII)</li>
+                                    <li>实现编译器生成二进制机器码，并实现虚拟机去执行机器码逻辑</li>
+                                    <li>实现汇编级别的局部变量、字符串、数组、运算，函数传参调用(支持递归)</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>FC游戏模拟器</span>
+                                </header>
+                                <ul class="item-bd">
+                                    <li>实现大部分 6502 CPU指令集，包括汇编和虚拟机</li>
+                                    <li>实现NES文件的解析，并对接自己实现的FC模拟器</li>
+                                    <li>实现内存与虚拟显存的映射, 并支持手柄控制逻辑</li>
                                 </ul>
                             </div>
                         </div>
@@ -313,10 +290,34 @@
                             <span class="section-title-r"></span>
                         </header>
                         <div class="section-bd">
-                            <div class="demo-box">
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>与你桌面端</span>
+                                </header>
+                                <img class="demo-img" src="./img/desktop.png" alt="" />
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>直播伴侣</span>
+                                </header>
+                                <img class="demo-img" src="./img/bdpc.png" alt="" />
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>动画编辑器</span>
+                                </header>
+                                <img class="demo-img" src="./img/5.png" alt="" />
+                            </div>
+                            <div class="item">
+                                <header class="item-hd">
+                                    <span>图形引擎</span>
+                                </header>
+                                <img class="demo-img" src="./img/1.png" alt="" />
+                            </div>
+                            <!-- <div class="demo-box">
                                 <div class="item">
                                     <header class="item-hd">
-                                        <span>光线追踪与调试界面</span>
+                                        <span>图形引擎</span>
                                     </header>
                                     <img class="demo2-img" src="./img/1.png" alt="" />
                                 </div>
@@ -327,14 +328,7 @@
                                     </header>
                                     <img class="demo2-img" src="./img/5.png" alt="" />
                                 </div>
-                            </div>
-                            <br />
-                            <div class="item">
-                                <header class="item-hd">
-                                    <span>与你桌面端</span>
-                                </header>
-                                <img class="demo-img" src="./img/desktop.png" alt="" />
-                            </div>
+                            </div> -->
                         </div>
                     </section>
                 </div>
@@ -348,6 +342,6 @@
 
 <script>
 export default {
-    name: 'App'
+    name: 'App',
 };
 </script>
