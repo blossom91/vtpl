@@ -1,9 +1,9 @@
-@import '../node_modules/compass-mixins/lib/compass/reset';
-@import '../node_modules/compass-mixins/lib/compass/css3';
+@import "../node_modules/compass-mixins/lib/compass/reset";
+@import "../node_modules/compass-mixins/lib/compass/css3";
 
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
-$font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+$font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
 * {
     @include box-sizing(border-box);
@@ -113,7 +113,8 @@ a {
     .name {
         float: left;
         h1 {
-            font-family: 'Lucida Grande', 'Hiragino Sans GB', 'Hiragino Sans GB W3', $font-family;
+            font-family: "Lucida Grande", "Hiragino Sans GB",
+                "Hiragino Sans GB W3", $font-family;
             font-weight: 500;
             letter-spacing: 5px;
             @media screen and (max-width: 720px) {
@@ -175,7 +176,8 @@ a {
                     @media print {
                         color: #000;
                     }
-                    font-family: 'Lucida Grande', 'Hiragino Sans GB', 'Hiragino Sans GB W3', $font-family;
+                    font-family: "Lucida Grande", "Hiragino Sans GB",
+                        "Hiragino Sans GB W3", $font-family;
                     font-size: 14px;
                     line-height: 22px;
                     &:hover {
